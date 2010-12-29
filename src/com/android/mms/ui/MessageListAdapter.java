@@ -116,6 +116,7 @@ public class MessageListAdapter extends CursorAdapter {
     private Pattern mHighlight;
     private Context mContext;
     private boolean mFullTimestamp;
+    private boolean mSentTimestamp;
 
     public MessageListAdapter(
             Context context, Cursor c, ListView listView,
@@ -136,6 +137,7 @@ public class MessageListAdapter extends CursorAdapter {
 
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
         mFullTimestamp = prefs.getBoolean(MessagingPreferenceActivity.FULL_TIMESTAMP, false);
+        mSentTimestamp = prefs.getBoolean(MessagingPreferenceActivity.SENT_TIMESTAMP, false);
 
         listView.setRecyclerListener(new AbsListView.RecyclerListener() {
             @Override
@@ -211,7 +213,7 @@ public class MessageListAdapter extends CursorAdapter {
         MessageItem item = mMessageItemCache.get(getKey(type, msgId));
         if (item == null && c != null && isCursorValid(c)) {
             try {
-                item = new MessageItem(mContext, type, c, mColumnsMap, mHighlight, mFullTimestamp);
+                item = new MessageItem(mContext, type, c, mColumnsMap, mHighlight, mFullTimestamp, mSentTimestamp);
                 mMessageItemCache.put(getKey(item.mType, item.mMsgId), item);
             } catch (MmsException e) {
                 Log.e(TAG, "getCachedMessageItem: ", e);

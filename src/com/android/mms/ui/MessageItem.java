@@ -94,14 +94,16 @@ public class MessageItem {
     int mErrorType;
     int mErrorCode;
     boolean mFullTimestamp;
+    boolean mSentTimestamp;
 
     MessageItem(Context context, String type, Cursor cursor,
-            ColumnsMap columnsMap, Pattern highlight, boolean fullTimestamp) throws MmsException {
+            ColumnsMap columnsMap, Pattern highlight, boolean fullTimestamp, boolean sentTimestamp) throws MmsException {
         mContext = context;
         mMsgId = cursor.getLong(columnsMap.mColumnMsgId);
         mHighlight = highlight;
         mType = type;
         mFullTimestamp = fullTimestamp;
+        mSentTimestamp = sentTimestamp;
 
         if ("sms".equals(type)) {
             mReadReport = false; // No read reports in sms
@@ -140,6 +142,9 @@ public class MessageItem {
             if (!isOutgoingMessage()) {
                 // Set "received" or "sent" time stamp
                 long date = cursor.getLong(columnsMap.mColumnSmsDate);
+                if (mSentTimestamp && mType.equals(Sms.MESSAGE_TYPE_INBOX)) {
+                    date = cursor.getLong(columnsMap.mColumnSmsDateSent);
+                }
                 mTimestamp = MessageUtils.formatTimeStampString(context, date, mFullTimestamp);
             }
 

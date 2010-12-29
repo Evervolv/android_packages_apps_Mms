@@ -65,6 +65,7 @@ public class MessagingPreferenceActivity extends PreferenceActivity {
     public static final String AUTO_DELETE              = "pref_key_auto_delete";
 
     public static final String FULL_TIMESTAMP           = "pref_key_mms_full_timestamp";
+    public static final String SENT_TIMESTAMP           = "pref_key_mms_use_sent_timestamp";
 
     // Menu entries
     private static final int MENU_RESTORE_DEFAULTS    = 1;
