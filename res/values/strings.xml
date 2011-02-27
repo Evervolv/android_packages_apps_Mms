@@ -763,5 +763,8 @@
          changed -->
     <string name="error_state_text">The state of threads and recipients is inconsistent. Please capture a bug report and send it to android-sms-bugs@google.com</string>
 
+    <string name="pref_title_9016_disabled">9016 Notifications</string>
+    <string name="pref_summary_9016_disabled">Disable 9016 message notifications.</string>
+
 </resources>
 

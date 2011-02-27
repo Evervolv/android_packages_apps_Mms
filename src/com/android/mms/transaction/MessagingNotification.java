@@ -256,10 +256,14 @@ public class MessagingNotification {
         }
 
         public void deliver(Context context, boolean isNew, int count, int uniqueThreads) {
-            updateNotification(
-                    context, mClickIntent, mDescription, mIconResourceId, isNew,
-                    (isNew? mTicker : null), // only display the ticker if the message is new
-                    mTimeMillis, mTitle, count, uniqueThreads);
+        	SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(context);
+        	Log.i("MMS", "mTitle - " + mTitle);
+        	//if (!sp.getBoolean(MessagingPreferenceActivity.VM_DISABLED, false) &&!mTitle.equals("9016")) {
+		        updateNotification(
+		                context, mClickIntent, mDescription, mIconResourceId, isNew,
+		                (isNew? mTicker : null), // only display the ticker if the message is new
+		                mTimeMillis, mTitle, count, uniqueThreads);
+        	//}
         }
 
         public long getTime() {
