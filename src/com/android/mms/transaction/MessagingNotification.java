@@ -256,14 +256,10 @@ public class MessagingNotification {
         }
 
         public void deliver(Context context, boolean isNew, int count, int uniqueThreads) {
-        	SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(context);
-        	Log.i("MMS", "mTitle - " + mTitle);
-        	//if (!sp.getBoolean(MessagingPreferenceActivity.VM_DISABLED, false) &&!mTitle.equals("9016")) {
-		        updateNotification(
-		                context, mClickIntent, mDescription, mIconResourceId, isNew,
-		                (isNew? mTicker : null), // only display the ticker if the message is new
-		                mTimeMillis, mTitle, count, uniqueThreads);
-        	//}
+            updateNotification(
+                    context, mClickIntent, mDescription, mIconResourceId, isNew,
+                    (isNew? mTicker : null), // only display the ticker if the message is new
+                    mTimeMillis, mTitle, count, uniqueThreads);
         }
 
         public long getTime() {
@@ -334,13 +330,13 @@ public class MessagingNotification {
         ContentResolver resolver = context.getContentResolver();
         Cursor cursor = SqliteWrapper.query(context, resolver, Sms.CONTENT_URI,
                     SMS_STATUS_PROJECTION, NEW_DELIVERY_SM_CONSTRAINT,
-                    null, Sms.DATE + " desc");
+                    null, Sms.DATE);
 
         if (cursor == null)
             return null;
 
         try {
-            if (!cursor.moveToFirst())
+            if (!cursor.moveToLast())
             return null;
 
             String address = cursor.getString(COLUMN_SMS_ADDRESS);

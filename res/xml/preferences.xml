@@ -76,11 +76,6 @@
                         android:title="@string/pref_title_notification_enabled"
                         android:summary="@string/pref_summary_notification_enabled"
                         android:defaultValue="true" />
-    <CheckBoxPreference android:key="pref_key_disable_9016"
-                        android:title="@string/pref_title_9016_disabled"
-                        android:summary="@string/pref_summary_9016_disabled"
-			android:enabled="false"
-                        android:defaultValue="false" />
     <RingtonePreference android:layout="?android:attr/preferenceLayoutChild"
                         android:dependency="pref_key_enable_notifications"
                         android:key="pref_key_ringtone"

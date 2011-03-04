@@ -67,6 +67,10 @@ public class UriImage {
 
         mSrc = mPath.substring(mPath.lastIndexOf('/') + 1);
 
+        if(mSrc.startsWith(".") && mSrc.length() > 1) {
+            mSrc = mSrc.substring(1);
+        }
+
         // Some MMSCs appear to have problems with filenames
         // containing a space.  So just replace them with
         // underscores in the name, which is typically not
@@ -185,13 +189,6 @@ public class UriImage {
 
         part.setData(data);
         part.setContentType(getContentType().getBytes());
-        String src = getSrc();
-        byte[] srcBytes = src.getBytes();
-        part.setContentLocation(srcBytes);
-        part.setFilename(srcBytes);
-        int period = src.lastIndexOf(".");
-        byte[] contentId = period != -1 ? src.substring(0, period).getBytes() : srcBytes;
-        part.setContentId(contentId);
 
         return part;
     }
@@ -269,6 +266,7 @@ public class UriImage {
                             b.compress(CompressFormat.JPEG, quality, os);
                         }
                     }
+                    b.recycle();        // done with the bitmap, release the memory
                 } catch (java.lang.OutOfMemoryError e) {
                     Log.w(TAG, "getResizedImageData - image too big (OutOfMemoryError), will try "
                             + " with smaller scale factor, cur scale factor: " + scaleFactor);
@@ -288,6 +286,9 @@ public class UriImage {
 
             return os == null ? null : os.toByteArray();
         } catch (FileNotFoundException e) {
+            Log.e(TAG, e.getMessage(), e);
+            return null;
+        } catch (java.lang.OutOfMemoryError e) {
             Log.e(TAG, e.getMessage(), e);
             return null;
         } finally {
