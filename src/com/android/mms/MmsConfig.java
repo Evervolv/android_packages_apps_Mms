@@ -36,6 +36,7 @@ public class MmsConfig {
 
     private static final int MAX_IMAGE_HEIGHT = 480;
     private static final int MAX_IMAGE_WIDTH = 640;
+    private static final int MAX_TEXT_LENGTH = 2000;
 
     /**
      * Whether to hide MMS functionality from the user (i.e. SMS only).
@@ -60,6 +61,10 @@ public class MmsConfig {
     private static int mMinimumSlideElementDuration = 7;        // default to 7 sec
     private static boolean mNotifyWapMMSC = false;
     private static boolean mAllowAttachAudio = true;
+    private static int mSmsToMmsTextThreshold = 4;
+    private static boolean mEnableMultipartSMS = true;
+    private static boolean mEnableSlideDuration = true;
+    private static int mMaxTextLength = -1;
 
     // This is the max amount of storage multiplied by mMaxMessageSize that we
     // allow of unsent messages before blocking the user from sending any more
@@ -77,6 +82,10 @@ public class MmsConfig {
         }
 
         loadMmsSettings(context);
+    }
+
+    public static int getSmsToMmsTextThreshold() {
+        return mSmsToMmsTextThreshold;
     }
 
     public static boolean getMmsEnabled() {
@@ -132,6 +141,10 @@ public class MmsConfig {
         return mRecipientLimit;
     }
 
+    public static int getMaxTextLimit() {
+        return mMaxTextLength > -1 ? mMaxTextLength : MAX_TEXT_LENGTH;
+    }
+
     public static int getDefaultSMSMessagesPerThread() {
         return mDefaultSMSMessagesPerThread;
     }
@@ -154,6 +167,14 @@ public class MmsConfig {
 
     public static int getMinimumSlideElementDuration() {
         return mMinimumSlideElementDuration;
+    }
+
+    public static boolean getMultipartSmsEnabled() {
+        return mEnableMultipartSMS;
+    }
+
+    public static boolean getSlideDurationEnabled() {
+        return mEnableSlideDuration;
     }
 
     public static boolean getNotifyWapMMSC() {
@@ -242,6 +263,10 @@ public class MmsConfig {
                             mAliasEnabled = "true".equalsIgnoreCase(text);
                         } else if ("allowAttachAudio".equalsIgnoreCase(value)) {
                             mAllowAttachAudio = "true".equalsIgnoreCase(text);
+                        } else if ("enableMultipartSMS".equalsIgnoreCase(value)) {
+                            mEnableMultipartSMS = "true".equalsIgnoreCase(text);
+                        } else if ("enableSlideDuration".equalsIgnoreCase(value)) {
+                            mEnableSlideDuration = "true".equalsIgnoreCase(text);
                         }
                     } else if ("int".equals(tag)) {
                         // int config tags go here
@@ -274,6 +299,10 @@ public class MmsConfig {
                             mAliasRuleMinChars = Integer.parseInt(text);
                         } else if ("aliasMaxChars".equalsIgnoreCase(value)) {
                             mAliasRuleMaxChars = Integer.parseInt(text);
+                        } else if ("smsToMmsTextThreshold".equalsIgnoreCase(value)) {
+                            mSmsToMmsTextThreshold = Integer.parseInt(text);
+                        } else if ("maxMessageTextSize".equalsIgnoreCase(value)) {
+                            mMaxTextLength = Integer.parseInt(text);
                         }
                     } else if ("string".equals(tag)) {
                         // string config tags go here

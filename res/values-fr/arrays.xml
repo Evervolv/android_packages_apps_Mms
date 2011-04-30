@@ -56,4 +56,13 @@
     <item msgid="6334637439528489607">"Rigole"</item>
     <item msgid="7602915122893958066">"Confus"</item>
   </string-array>
+
+    <string-array name="pref_mms_notification_vibrate_pattern_entries">
+        <item>Normal</item>
+        <item>Vibration moyenne</item>
+        <item>Longue vibration</item>
+        <item>Plusieurs courtes</item>
+        <item>Plusieurs longues</item>
+        <item>@string/pref_mms_custom_option</item>
+    </string-array>
 </resources>

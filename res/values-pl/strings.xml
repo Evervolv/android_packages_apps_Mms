@@ -192,6 +192,7 @@
     <string name="pref_summary_mms_auto_retrieval" msgid="925163257363757048">"Odbierz wiadomości automatycznie"</string>
     <string name="pref_title_mms_retrieval_during_roaming" msgid="6016227402731817804">"Autoodbieranie w roamingu"</string>
     <string name="pref_summary_mms_retrieval_during_roaming" msgid="2427892806582531020">"Odbierz wiadomości automatycznie w roamingu"</string>
+    <string name="pref_title_save_location">Miejsce docelowe załączników</string>
     <string name="to_label" msgid="2355268818058389047">"Do "</string>
     <string name="confirm_dialog_title" msgid="5810813994465120375">"Usuń"</string>
     <string name="confirm_dialog_locked_title" msgid="8179085718150932242">"Czy usunąć zablokowaną wiadomość?"</string>
@@ -335,4 +336,89 @@
     <string name="sending_message" msgid="222836893217450538">"Trwa wysyłanie…"</string>
     <string name="error_state" msgid="5177386717626893507">"Niezgodny stan"</string>
     <string name="error_state_text" msgid="5006221625000536698">"Stan wątków i odbiorców jest niezgodny. Utwórz raport o błędzie i wyślij go na adres android-sms-bugs@google.com"</string>
+    
+    <!-- Extra Settings: -->
+    <string name="pref_extra_settings">Ustawienia dodatkowe</string>
+
+    <!-- Back to all threads -->
+    <string name="pref_title_mms_back_to_all_threads">Powrót do wszystkich wątków</string>
+    <string name="pref_summary_mms_back_to_all_threads">Zawsze powracaj do wszystkich wątków, kiedy zostanie wciśnięty przycisk wstecz</string>
+
+    <!-- Toggle setting for enable/disable Black Background -->
+    <string name="pref_title_mms_black_background">Czarne tło</string>
+    <string name="pref_summary_mms_black_background">Włącz/wyłącz czarne tło\n(Zrestartuj aplikację po zmianie)</string>
+
+    <!-- Custom user-agent -->
+    <string name="pref_mms_custom_option">Własny...</string>
+    <string name="pref_title_mms_user_agent">User-Agent</string>
+    <string name="pref_summary_mms_user_agent">Udawaj inny telefon, przy wiadomościach MMS</string>
+    <string name="pref_mms_user_agent_custom_set">User Agent ustawiony na:\n</string>
+
+    <!-- Full timestamps -->
+    <string name="pref_title_mms_full_timestamp">Pełna data</string>
+    <string name="pref_summary_mms_full_timestamp">Pokazuj pełną datę i czas wiadomości</string>
+
+    <!-- Which timestamps -->
+    <string name="pref_title_mms_use_sent_timestamp">Użyj oryginalnej daty</string>
+    <string name="pref_summary_mms_use_sent_timestamp">Pokaż i przechowuj datę wysłania, a nie odbioru</string>
+
+    <!-- Only mobile numbers -->
+    <string name="pref_title_only_mobile_numbers">Tylko numery komórkowe</string>
+    <string name="pref_summary_only_mobile_numbers">Pokazuj w polu odbiorcy tylko telefony komórkowe</string>
+
+    <!-- Email address completion -->
+    <string name="pref_title_mms_email_addr_completion">Uzupełnianie adresu email</string>
+    <string name="pref_summary_mms_email_addr_completion">Włącz/wyłącz uzupełnianie adresu email w polu odbiorcy</string>
+
+    <!-- Message Font size -->
+    <string name="pref_title_mms_message_font_size">Rozmiar czcionki wiadomości</string>
+    <string name="pref_summary_mms_message_font_size">Zmień rozmiar czcionki wiadomości</string>
+    <string name="pref_dialogtitle_mms_message_font_size">Wybierz rozmiar czcionki:</string>
+
+    <!-- Change Vibrate pattern/method for message notification -->
+    <string name="pref_title_mms_notification_vibrate_settings">Ustawienia wibracji</string>
+    <string name="pref_title_mms_notification_vibrate_pattern">Wzór wibracji</string>
+    <string name="pref_summary_mms_notification_vibrate_pattern">Zmień wzór wibracji</string>
+    <string name="pref_title_mms_notification_vibrate_call">Wibruj podczas połączenia</string>
+    <string name="pref_summary_mms_notification_vibrate_call">Pozwól na wibracje podczas połączenia</string>
+    <string name="pref_title_mms_notification_vibrate_custom">Własny wzór wibracji</string>
+    <string name="pref_text_mms_notification_vibrate_custom">Format: wyłączony/włączony w milisekundach: wył, wł, wył, wł, ...</string>
+
+    <!-- Send on enter -->
+    <string name="pref_title_mms_send_on_enter">Wyślij enterem</string>
+    <string name="pref_summary_mms_send_on_enter">Wyślij wiadomość, gdy wciśnięty zostanie przycisk enter</string>
+
+    <!-- Sms templates -->
+    <string name="prefs_templates_settings">Szablony wiadomości</string>
+    <string name="pref_title_templates_manage">Szablony</string>
+    <string name="pref_summary_templates_manage">Zarządzaj swoimi szablonami</string>
+    <string name="pref_title_templates_show_gesture">Gest</string>
+    <string name="pref_summary_templates_show_gesture">Pokazuj ślady gestów</string>
+    <string name="template_save">Zapisz</string>
+    <string name="template_insert_hint">Wprowadź tekst szablonu</string>
+    <string name="template_empty_text">Pole tekstowe nie może być puste</string>
+    <string name="template_explanation">Wprowadź lub zmodyfikuj tekst szablonu i opcjonalnie przypisz do niego gest</string>
+    <string name="template_edit">Edytuj</string>
+    <string name="template_delete">Usuń</string>
+    <string name="template_ctx_menu_title">Akcje</string>
+    <string name="template_list_title">Szablony</string>
+    <string name="template_edit_title">Edytuj szablon</string>
+    <string name="template_new_title">Nowy szablon</string>
+    <string name="template_insert">Wstaw szablon</string>
+    <string name="template_insert_ctx_menu_title">Edytuj tekst</string>
+    <string name="template_gesture_draw">Wykonaj gest w przestrzeni poniżej</string>
+    <string name="template_not_present_error">Nie zdefiniowano żadnego szablonu</string>
+    <string name="template_not_present_error_title">Błąd</string>
+    <string name="template_select">Wybierz szablon</string>
+    <string name="template_cancel_confirm_title">Ostrzeżenie</string>
+    <string name="template_cancel_confirm_text">Czy chcesz anulować?</string>
+
+    <!-- Phone goggles -->
+    <string name="toast_phone_goggles">Nie możesz teraz wysyłać wiadomości SMS. Spróbuj ponownie później.</string>
+    <string name="dialog_phone_goggles_title">Wiadomość zablokowana</string>
+    <string name="dialog_phone_goggles_title_unlocked">Wiadomość odblokowana</string>
+    <string name="dialog_phone_goggles_content">Wysyłanie wiadomości w tej chwili może być nierozsądne. Czy napewno chcesz kontynuować?</string>
+    <string name="dialog_phone_goggles_unauthorized">Wysyłanie wiadomości w tej chwili może być nierozsądne.</string>
+    <string name="dialog_phone_goggles_ok">Wyślij</string>
+    <string name="dialog_phone_goggles_cancel">Zapisz wersję roboczą</string>
 </resources>

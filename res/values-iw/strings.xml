@@ -167,6 +167,10 @@
     <string name="pref_summary_mms_delivery_reports" msgid="4874657984217756112">"בקש דוח מסירה לכל הודעה שתשלח"</string>
     <string name="pref_summary_mms_read_reports" msgid="2748323864008907440">"בקש דוח קריאה לכל הודעה שתשלח"</string>
     <string name="pref_summary_sms_delivery_reports" msgid="5852207702358546129">"בקש דוח מסירה לכל הודעה שתשלח"</string>
+	<string name="pref_title_sms_split_160">פיצול SMS</string>
+    <string name="pref_summary_sms_split_160">פצל הודעות כל 160 תווים</string>
+    <string name="pref_title_sms_split_counter">מונה פיצול</string>
+    <string name="pref_summary_sms_split_counter">להוספת הודעה לדוגמה מונה (1/2)</string>
     <string name="pref_summary_auto_delete" msgid="7719538116486177613">"מחק הודעות ישנות עם הגעה למגבלה"</string>
     <string name="pref_summary_delete_limit" msgid="597128041393045216">"<xliff:g id="COUNT">%1$s</xliff:g> הודעות בכל שיחה"</string>
     <string name="pref_title_manage_sim_messages" msgid="7820895261757881177">"נהל הודעות בכרטיס SIM"</string>
@@ -192,6 +196,7 @@
     <string name="pref_summary_mms_auto_retrieval" msgid="925163257363757048">"אחזר הודעות באופן אוטומטי"</string>
     <string name="pref_title_mms_retrieval_during_roaming" msgid="6016227402731817804">"אחזור אוטומטי בנדידה"</string>
     <string name="pref_summary_mms_retrieval_during_roaming" msgid="2427892806582531020">"אחזר הודעות באופן אוטומטי בעת נדידה"</string>
+	<string name="pref_title_save_location">תיקית השמירה לקבצים מצורפים</string>
     <string name="to_label" msgid="2355268818058389047">"אל "</string>
     <string name="confirm_dialog_title" msgid="5810813994465120375">"מחק"</string>
     <string name="confirm_dialog_locked_title" msgid="8179085718150932242">"למחוק הודעה נעולה?"</string>
@@ -253,6 +258,7 @@
     <string name="attach_sound" msgid="3149325985970669609">"אודיו"</string>
     <string name="attach_record_sound" msgid="6011431304469858929">"הקלט אודיו"</string>
     <string name="attach_slideshow" msgid="3497422151091037063">"הצגת שקופיות"</string>
+	<string name="attach_contact_info">פרטי אנשי קשר</string>
     <string name="select_bottom_text" msgid="4201966447623311931">"טקסט בתחתית"</string>
     <string name="select_top_text" msgid="6734183477539197815">"טקסט למעלה"</string>
     <string name="delivery_toast_body" msgid="4478305651728684364">"הודעה התקבלה על ידי %s"</string>
@@ -335,4 +341,67 @@
     <string name="sending_message" msgid="222836893217450538">"שולח…"</string>
     <string name="error_state" msgid="5177386717626893507">"מצב לא עקבי"</string>
     <string name="error_state_text" msgid="5006221625000536698">"המצב של השרשורים ואנשי הקשר אינו עקבי. צור דוח באגים ושלח אותו לכתובת android-sms-bugs@google.com"</string>
+  <string name="pref_extra_settings">הגדרות נוספות</string>
+  <string name="pref_title_mms_back_to_all_threads">חזור אל כל הההודעות</string>
+  <string name="pref_summary_mms_back_to_all_threads">תמיד חזור אל כל ההודעות כאשר נלחץ כפתור החזרה</string>
+  <string name="pref_title_mms_black_background">רקע שחור</string>
+  <string name="pref_summary_mms_black_background">הפעלה / השבתה n שחור \ רקע (Restart MMS)</string>
+  <string name="pref_title_show_counter_always">הצג תמיד מונה תווים</string>
+  <string name="pref_summary_show_counter_always">הצג תמיד את מונה התווים בעת כתיבת הודעות</string>
+  <string name="pref_mms_custom_option">מותאם אישית..</string>
+  <string name="pref_title_mms_user_agent">סוכן משתמש מותאם אישית</string>
+  <string name="pref_summary_mms_user_agent">מתיחה בטלפון כמודל שונה ל-MMS</string>
+  <string name="pref_mms_user_agent_custom_set">הגדר סוכן משתמש מותאם אישית: \n</string>
+  <string name="pref_title_mms_full_timestamp">חותמות זמן מלא</string>
+  <string name="pref_summary_mms_full_timestamp">אפשר להציג תאריך ושעה בחותמות זמן של הודעה</string>
+  <string name="pref_title_mms_use_sent_timestamp">השתמש בחותמות זמן המקורי</string>
+  <string name="pref_summary_mms_use_sent_timestamp">להציג ולאחסן תאריך שליחה במקום תאריך הקבלה</string>
+  <string name="pref_title_only_mobile_numbers">רק מספרי סלולרי</string>
+  <string name="pref_summary_only_mobile_numbers">אפשר להציג רק מספר הנייד בשדה הנמען</string>
+  <string name="pref_title_mms_email_addr_completion">אימייל השלמת הכתובת</string>
+  <string name="pref_summary_mms_email_addr_completion">הפעל/בטל של השלמה אוטומטית של דוא ל כתובת לתוך בשדה הנמען</string>
+  <string name="pref_title_mms_message_font_size">גודל גופן ההודעה</string>
+  <string name="pref_summary_mms_message_font_size">שינוי גודל הגופן של תצוגת הודעה</string>
+  <string name="pref_dialogtitle_mms_message_font_size">בחר גודל הגופן</string>
+  <string name="pref_title_mms_notification_vibrate_settings">הגדרות רטט</string>
+  <string name="pref_title_mms_notification_vibrate_pattern">רטט דוגמת מילוי</string>
+  <string name="pref_summary_mms_notification_vibrate_pattern">שינוי דפוס לרטוט</string>
+  <string name="pref_title_mms_notification_vibrate_call">רטט בזמן שיחה</string>
+  <string name="pref_summary_mms_notification_vibrate_call">אפשר לרטוט בעת שיחה</string>
+  <string name="pref_title_mms_notification_vibrate_custom">מותאם אישית לרטוט דפוס</string>
+  <string name="pref_text_mms_notification_vibrate_custom">...,פורמאט כבה/הדלק במילי שניות: כבה, הדלק, כבה, הדלק</string>
+  <string name="pref_title_mms_send_on_enter">שלח על הזן</string>
+  <string name="pref_summary_mms_send_on_enter">הפעל/בטל שליחת הודעה בעת הקשה על מקש Enter</string>
+  <string name="prefs_templates_settings">SMS תבניות</string>
+  <string name="pref_title_templates_manage">תבניות</string>
+  <string name="pref_summary_templates_manage">ניהול תבניות sms שלך</string>
+  <string name="pref_title_templates_show_gesture">המחווה</string>
+  <string name="pref_summary_templates_show_gesture">הצג מחווה עקבות</string>
+  <string name="pref_title_template_gestures_sensitivity">רגישות התנועה</string>
+  <string name="template_save">שמור</string>
+  <string name="template_insert_hint">הכנס כאן את הטקסט תבנית</string>
+  <string name="template_empty_text">שדה טקסט לא יכול להיות ריק</string>
+  <string name="template_explanation">להוסיף או לשנות את הטקסט תבנית וכן ובמידת הצורך לצייר את התנועה כדי לשייך אותו</string>
+  <string name="template_edit">ערוך</string>
+  <string name="template_delete">מחק</string>
+  <string name="template_ctx_menu_title">פעולות</string>
+  <string name="template_list_title">תבניות</string>
+  <string name="template_edit_title">ערוך תבניות</string>
+  <string name="template_new_title">תבנית חדשה</string>
+  <string name="template_insert">הוספת תבנית</string>
+  <string name="template_insert_ctx_menu_title">ערוך טקסט</string>
+  <string name="template_gesture_draw">לצייר את התנועה בשטח להלן</string>
+  <string name="template_not_present_error">לא הגדרת כל תבנית</string>
+  <string name="template_not_present_error_title">שגיאה</string>
+  <string name="template_select">בחר תבנית</string>
+  <string name="template_cancel_confirm_title">אזהרה</string>
+  <string name="template_cancel_confirm_text">האם ברצונך לבטל?</string>
+  <string name="gestures_already_present">!אזהרה: תנועה דומה משוייכת לתבנית אחרת</string>
+  <string name="toast_phone_goggles">.אינך מורשה לשלוח סמס בזמן הזה. בבקשה נסה מאוחר יותר</string>
+  <string name="dialog_phone_goggles_title">סמס נחסם</string>
+  <string name="dialog_phone_goggles_title_unlocked">סמס מאושר</string>
+  <string name="dialog_phone_goggles_unauthorized">.שליחת סמס בזמן אינו מומלץ</string>
+  <string name="dialog_phone_goggles_ok">שלח</string>
+  <string name="dialog_phone_goggles_cancel">שמור טיוטה</string>
 </resources>
+

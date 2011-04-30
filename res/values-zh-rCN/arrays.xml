@@ -56,4 +56,12 @@
     <item msgid="6334637439528489607">"大笑"</item>
     <item msgid="7602915122893958066">"困惑"</item>
   </string-array>
+  <string-array name="pref_mms_notification_vibrate_pattern_entries">
+    <item>正常</item>
+    <item>中等振动</item>
+    <item>长时振动</item>
+    <item>多次短振动</item>
+    <item>多次长振动</item>
+    <item>@string/pref_mms_custom_option</item>
+  </string-array>
 </resources>

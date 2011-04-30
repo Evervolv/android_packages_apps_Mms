@@ -33,7 +33,7 @@
     <string name="menu_delete" msgid="1851666911396479006">"Удалить цепочку"</string>
     <string name="menu_undelivered_messages" msgid="3896857623211780616">"Недоставленные сообщения"</string>
     <string name="menu_view" msgid="7448852683948080108">"Просмотреть цепочку"</string>
-    <string name="refreshing" msgid="987335057871404222">"Обновление..."</string>
+    <string name="refreshing">Обновление\u2026</string>
     <string name="has_draft" msgid="2487465595514636160">"Черновик"</string>
     <!-- unknown quoting pattern: original -1, translation 1 -->
     <string name="broadcast_from_to" msgid="2050376286109362539">"<xliff:g id="SENDER">%1$s</xliff:g> &amp;gt; <xliff:g id="RECIPIENT">%2$s</xliff:g>"</string>
@@ -54,7 +54,7 @@
     <string name="delete_thread" msgid="757258847736632791">"Удалить цепочку"</string>
     <string name="menu_forward" msgid="9026858380050046756">"Переслать"</string>
     <string name="download" msgid="4488877642230207631">"Загрузить"</string>
-    <string name="downloading" msgid="1779557575565350637">"Загрузка..."</string>
+    <string name="downloading">Загрузка\u2026</string>
     <string name="name_colon" msgid="7069560650889479120"><b>"<xliff:g id="NAME">%s</xliff:g>"</b>": "</string>
     <string name="inline_subject" msgid="4057621785274119260">"&lt;Тема: <xliff:g id="SUBJECT">%s</xliff:g>&gt;"</string>
     <string name="drm_protected_text" msgid="1396394157870730742">"* Текст защищен средствами DRM *"</string>
@@ -109,8 +109,10 @@
     <string name="cannot_send_message" msgid="3918913277571649400">"Сообщение об ошибке"</string>
     <string name="cannot_send_message_reason" msgid="8745080126044054343">"Не указано ни одного реального получателя."</string>
     <string name="cannot_forward_drm_obj" msgid="84606990079390099">"Пересылка DRM-объекта из этого сообщения невозможна."</string>
-    <string name="converting_to_picture_message" msgid="2980023239017588627">"Преобразование в сообщение MMS..."</string>
-    <string name="converting_to_text_message" msgid="6374423235426015422">"Преобразование в сообщение SMS..."</string>
+    <!-- Error message displayed when the user attempts to attach a contact whose ID could not be resolved -->
+    <string name="cannot_find_contact">Невозможно прикрепить выбранный вами контакт.</string>
+    <string name="converting_to_picture_message">Преобразование в сообщение MMS\u2026</string>
+    <string name="converting_to_text_message">Преобразование в сообщение SMS\u2026</string>
     <string name="cannot_add_slide_anymore" msgid="8437666385579890987">"Больше нельзя добавить слайдов."</string>
     <string name="cannot_add_picture_and_video" msgid="4721981351130823908">"Нельзя добавить на слайд и картинку, и видео."</string>
     <string name="cannot_save_message" msgid="5026354972915392301">"Не удается сохранить сообщение."</string>
@@ -168,6 +170,14 @@
     <string name="pref_summary_mms_delivery_reports" msgid="4874657984217756112">"Запрашивать отчет о доставке для всех отправляемых сообщений"</string>
     <string name="pref_summary_mms_read_reports" msgid="2748323864008907440">"Запрашивать отчет о прочтении для всех отправляемых сообщений"</string>
     <string name="pref_summary_sms_delivery_reports" msgid="5852207702358546129">"Запрашивать отчет о доставке для всех отправляемых сообщений"</string>
+       <!-- Settings item for SMS Split 160 characters setting -->
+    <string name="pref_title_sms_split_160">Разбивать SMS</string>
+        <!-- Settings item description for boolean SMS Split 160 characters setting -->
+    <string name="pref_summary_sms_split_160">Разбивать сообщения каждые 160 символов</string>
+        <!-- Settings item for boolean option for SMS Split Counter -->
+    <string name="pref_title_sms_split_counter">Счётчик фрагментов</string>
+        <!-- Settings item description for boolean SMS Split 160 characters setting -->
+    <string name="pref_summary_sms_split_counter">Добавляет к сообщению счётчик (напр. 1/2)</string>
     <string name="pref_summary_auto_delete" msgid="7719538116486177613">"Удалять старые сообщения по достижении макс. количества"</string>
     <string name="pref_summary_delete_limit" msgid="597128041393045216">"Сообщений в цепочке: <xliff:g id="COUNT">%1$s</xliff:g>"</string>
     <string name="pref_title_manage_sim_messages" msgid="7820895261757881177">"Сообщения на SIM-карте"</string>
@@ -193,6 +203,7 @@
     <string name="pref_summary_mms_auto_retrieval" msgid="925163257363757048">"Автоматически загружать MMS-сообщения"</string>
     <string name="pref_title_mms_retrieval_during_roaming" msgid="6016227402731817804">"Автозагрузка в роуминге"</string>
     <string name="pref_summary_mms_retrieval_during_roaming" msgid="2427892806582531020">"Автоматически загружать MMS-сообщения в роуминге"</string>
+    <string name="pref_title_save_location">Папка для сохранения приложений</string>   
     <string name="to_label" msgid="2355268818058389047">"Кому: "</string>
     <string name="confirm_dialog_title" msgid="5810813994465120375">"Удалить"</string>
     <string name="confirm_dialog_locked_title" msgid="8179085718150932242">"Удалить заблокированное сообщение?"</string>
@@ -254,9 +265,10 @@
     <string name="attach_sound" msgid="3149325985970669609">"Аудио"</string>
     <string name="attach_record_sound" msgid="6011431304469858929">"Записать аудио"</string>
     <string name="attach_slideshow" msgid="3497422151091037063">"Слайд-шоу"</string>
+    <string name="attach_contact_info">Контакт</string>
     <string name="select_bottom_text" msgid="4201966447623311931">"Текст внизу"</string>
     <string name="select_top_text" msgid="6734183477539197815">"Текст вверху"</string>
-    <string name="delivery_toast_body" msgid="4478305651728684364">"Получатель сообщения: %s"</string>
+    <string name="delivery_toast_body" msgid="4478305651728684364">"%s: сообщение доставлено"</string>
     <string name="notification_multiple" msgid="7684007285202109490">"Непрочитанных сообщений: <xliff:g id="COUNT">%s</xliff:g>"</string>
     <string name="notification_multiple_title" msgid="332602028959557541">"Новые сообщения"</string>
     <string name="notification_failed_multiple" msgid="4081781748475686236">"Не удается отправить сообщения: <xliff:g id="COUNT">%s</xliff:g>"</string>
@@ -336,4 +348,69 @@
     <string name="sending_message" msgid="222836893217450538">"Идет отправка…"</string>
     <string name="error_state" msgid="5177386717626893507">"Данные были изменены"</string>
     <string name="error_state_text" msgid="5006221625000536698">"Цепочки не соответствуют получателям. Сделайте снимок экрана и отправьте сообщение об ошибке по адресу android-sms-bugs@google.com."</string>
+	
+	<string name="pref_extra_settings">Дополнительные настройки</string>
+    <string name="pref_title_mms_back_to_all_threads">Вернуться ко всем сообщениям</string>
+    <string name="pref_summary_mms_back_to_all_threads">По нажатию кнопки назад возвращаться ко всем сообщениям.</string>
+    <string name="pref_title_mms_black_background">Чёрный фон</string>
+    <string name="pref_summary_mms_black_background">Вкл/выкл черный фон\n(Требуется перезапуск SMS/MMS)</string>
+    <!-- Toggle setting for always show character counter -->
+    <string name="pref_title_show_counter_always">Всегда показывать счётчик символов</string>
+    <string name="pref_summary_show_counter_always">Во время написания сообщения, всегда показывать счётчик символов</string>
+    <string name="pref_mms_custom_option">Пользовательский..</string>
+    <string name="pref_title_mms_user_agent">Пользовательский User-Agent</string>
+    <string name="pref_summary_mms_user_agent">Имитация разных моделей телефонов для MMS</string>
+    <string name="pref_mms_user_agent_custom_set">Пользовательский User Agent установлен как:\n</string>
+    <string name="pref_title_mms_full_timestamp">Полная метка времени</string>
+    <string name="pref_summary_mms_full_timestamp">Включение отображения полной даты и времение в сообщениях</string>
+    <string name="pref_title_mms_use_sent_timestamp">Использовать исходные метки времени</string>
+    <string name="pref_summary_mms_use_sent_timestamp">Отображение и сохранение даты отправки, а не даты приёма.</string>
+    <string name="pref_title_only_mobile_numbers">Только мобильные номера</string>
+    <string name="pref_summary_only_mobile_numbers">Включение отображения только мобильных номеров в поле получатель</string>
+    <string name="pref_title_mms_email_addr_completion">Автозаполнение адреса электронной почты</string>
+    <string name="pref_summary_mms_email_addr_completion">Вкл/выкл автозаполнения адреса электронной почты в поле получатель</string>
+    <string name="pref_title_mms_message_font_size">Размер шрифта сообщения</string>
+    <string name="pref_summary_mms_message_font_size">Изменение размера шрифта в просмотре сообщения</string>
+    <string name="pref_dialogtitle_mms_message_font_size">Выберите размер шрифта</string>
+    <string name="pref_title_mms_notification_vibrate_settings">Настройки вибрации</string>
+    <string name="pref_title_mms_notification_vibrate_pattern">Режим вибрации</string>
+    <string name="pref_summary_mms_notification_vibrate_pattern">Изменение режима вибрации</string>
+    <string name="pref_title_mms_notification_vibrate_call">Вибрировать при разговоре</string>
+    <string name="pref_summary_mms_notification_vibrate_call">Разрешить вибрировать при разговоре</string>
+    <string name="pref_title_mms_notification_vibrate_custom">Пользовательский режим вибрации</string>
+    <string name="pref_text_mms_notification_vibrate_custom">Формат выкл/вкл в миллисекундах: выкл, вкл, выкл, вкл, \u2026</string>
+    <string name="pref_title_mms_send_on_enter">Отправка по Enter</string>
+    <string name="pref_summary_mms_send_on_enter">Вкл/выкл отправки сообщения по нажатию кнопки Enter</string>
+    <string name="prefs_templates_settings">Шаблоны SMS</string>
+    <string name="pref_title_templates_manage">Шаблоны</string>
+    <string name="pref_summary_templates_manage">Управляйте своими шаблонами SMS</string>
+    <string name="pref_title_templates_show_gesture">Жесты</string>
+    <string name="pref_summary_templates_show_gesture">Показывать путь жеста</string>
+    <string name="pref_title_template_gestures_sensitivity">Чувствительность жеста</string>
+    <string name="template_save">Сохранить</string>
+    <string name="template_insert_hint">Напишите здесь текст шаблона</string>
+    <string name="template_empty_text">Текстовое поле не может быть пустым</string>
+    <string name="template_explanation">Вставьте или измените текст шаблона и создайте жест, чтобы связать его</string>
+    <string name="template_edit">Изменить</string>
+    <string name="template_delete">Удалить</string>
+    <string name="template_ctx_menu_title">Действия</string>
+    <string name="template_list_title">Шаблоны</string>
+    <string name="template_edit_title">Изменить шаблон</string>
+    <string name="template_new_title">Новый шаблон</string>
+    <string name="template_insert">Вставить шаблон</string>
+    <string name="template_insert_ctx_menu_title">Изменить текст</string>
+    <string name="template_gesture_draw">Создайте жест в области ниже</string>
+    <string name="template_not_present_error">Вы не определили ни одного шаблона</string>
+    <string name="template_not_present_error_title">Ошибка</string>
+    <string name="template_select">Выберите шаблон</string>
+    <string name="template_cancel_confirm_title">Внимание</string>
+    <string name="template_cancel_confirm_text">Желаете отменить?</string>
+    <string name="gestures_already_present">Предупреждение: похожий жест уже связан с другим шаблоном!</string>
+    <string name="toast_phone_goggles">Вы не можете отправить SMS в данный момент. Пожалуйста, повторите попытку позже.</string>
+    <string name="dialog_phone_goggles_title">SMS заблокировано</string>
+    <string name="dialog_phone_goggles_title_unlocked">SMS разрешена</string>
+    <string name="dialog_phone_goggles_content">Отправка SMS может быть не уместна в это время. Вы уверены, что хотите продолжить?</string>
+    <string name="dialog_phone_goggles_unauthorized">Отправка SMS может быть не уместна в это время.</string>
+    <string name="dialog_phone_goggles_ok">Отправить</string>
+    <string name="dialog_phone_goggles_cancel">Сохранить черновик</string>
 </resources>

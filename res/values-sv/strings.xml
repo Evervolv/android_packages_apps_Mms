@@ -108,6 +108,7 @@
     <string name="cannot_send_message" msgid="3918913277571649400">"Det går inte att skicka meddelandet"</string>
     <string name="cannot_send_message_reason" msgid="8745080126044054343">"Du har inte angett några giltiga mottagare för meddelandet."</string>
     <string name="cannot_forward_drm_obj" msgid="84606990079390099">"Det går inte att vidarebefordra DRM-objektet som ingår i meddelandet."</string>
+    <string name="cannot_find_contact">Kontakten du valde kunde inte bifogas.</string>
     <string name="converting_to_picture_message" msgid="2980023239017588627">"Konverterar till MMS …"</string>
     <string name="converting_to_text_message" msgid="6374423235426015422">"Konverterar till SMS …"</string>
     <string name="cannot_add_slide_anymore" msgid="8437666385579890987">"Det går inte att lägga till fler bilder."</string>
@@ -167,6 +168,10 @@
     <string name="pref_summary_mms_delivery_reports" msgid="4874657984217756112">"Begär en leveransrapport för varje meddelande du skickar"</string>
     <string name="pref_summary_mms_read_reports" msgid="2748323864008907440">"Begär en läsrapport för varje meddelande du skickar"</string>
     <string name="pref_summary_sms_delivery_reports" msgid="5852207702358546129">"Begär en leveransrapport för varje meddelande du skickar"</string>
+    <string name="pref_title_sms_split_160">SMS-uppdelning</string>
+    <string name="pref_summary_sms_split_160">Dela upp meddeanden på 160 tecken/styck</string>
+    <string name="pref_title_sms_split_counter">Uppdelningsräknare</string>
+    <string name="pref_summary_sms_split_counter">Lägger på en räknare till meddelanden, ex. (1/2)</string>
     <string name="pref_summary_auto_delete" msgid="7719538116486177613">"Ta bort gamla meddelanden när gränsen uppnås"</string>
     <string name="pref_summary_delete_limit" msgid="597128041393045216">"<xliff:g id="COUNT">%1$s</xliff:g> meddelanden per konversation"</string>
     <string name="pref_title_manage_sim_messages" msgid="7820895261757881177">"Hantera medd. på SIM-kortet"</string>
@@ -190,8 +195,9 @@
     <string name="prefDialogTitle_vibrateWhen" msgid="6419655771690242118">"Vibrera"</string>
     <string name="pref_title_mms_auto_retrieval" msgid="4021878285474431355">"Autohämtning"</string>
     <string name="pref_summary_mms_auto_retrieval" msgid="925163257363757048">"Hämta meddelanden automatiskt"</string>
-    <string name="pref_title_mms_retrieval_during_roaming" msgid="6016227402731817804">"Autohämtning vid roam."</string>
+    <string name="pref_title_mms_retrieval_during_roaming" msgid="6016227402731817804">"Autohämtning vid roaming"</string>
     <string name="pref_summary_mms_retrieval_during_roaming" msgid="2427892806582531020">"Hämta meddelanden automatiskt vid roaming"</string>
+    <string name="pref_title_save_location">Mapp för nedsparning av bilagor</string>
     <string name="to_label" msgid="2355268818058389047">"Till "</string>
     <string name="confirm_dialog_title" msgid="5810813994465120375">"Ta bort"</string>
     <string name="confirm_dialog_locked_title" msgid="8179085718150932242">"Vill du ta bort det låsta meddelandet?"</string>
@@ -253,6 +259,7 @@
     <string name="attach_sound" msgid="3149325985970669609">"Ljud"</string>
     <string name="attach_record_sound" msgid="6011431304469858929">"Spela in ljud"</string>
     <string name="attach_slideshow" msgid="3497422151091037063">"Bildspel"</string>
+    <string name="attach_contact_info">Kontaktinformation</string>
     <string name="select_bottom_text" msgid="4201966447623311931">"Text i nederkant"</string>
     <string name="select_top_text" msgid="6734183477539197815">"Text i överkant"</string>
     <string name="delivery_toast_body" msgid="4478305651728684364">"Meddelande mottaget av %s"</string>
@@ -335,4 +342,67 @@
     <string name="sending_message" msgid="222836893217450538">"Skickar…"</string>
     <string name="error_state" msgid="5177386717626893507">"Inkonsekvent status"</string>
     <string name="error_state_text" msgid="5006221625000536698">"Statusen för trådar och mottagare är inkonsekvent. Fota felet och skicka en rapport till android-sms-bugs@google.com"</string>
+    <string name="pref_extra_settings">Extra-inställningar</string>
+    <string name="pref_title_mms_back_to_all_threads">Backa till alla trådar</string>
+    <string name="pref_summary_mms_back_to_all_threads">Gå alltid till alla trådar vid tryck på bakåt-knappen</string>
+    <string name="pref_title_mms_black_background">Svart bakgrund</string>
+    <string name="pref_summary_mms_black_background">Aktivera/inaktivera svart bakgrund\n(Starta om Mms)</string>
+    <string name="pref_title_show_counter_always">Visa alltid teckenräknare</string>
+    <string name="pref_summary_show_counter_always">Visa alltid teckenräknaren när meddelanden skrivs</string>
+    <string name="pref_mms_custom_option">Anpassa..</string>
+    <string name="pref_title_mms_user_agent">Anpassad användaragent</string>
+    <string name="pref_summary_mms_user_agent">Låtsas att telefonen är en annan modell för MMS</string>
+    <string name="pref_mms_user_agent_custom_set">Anpassad användaragent satt till:\n</string>
+    <string name="pref_title_mms_full_timestamp">Kompletta tidsangivelser</string>
+    <string name="pref_summary_mms_full_timestamp">Aktivera för att visas både datum och tid i meddelandens tidsstämplar</string>
+    <string name="pref_title_mms_use_sent_timestamp">Använd ursprungliga tidsstämplar</string>
+    <string name="pref_summary_mms_use_sent_timestamp">Visa och lagra datum skickat istället för datum mottaget</string>
+    <string name="pref_title_only_mobile_numbers">Endast mobilnummer</string>
+    <string name="pref_summary_only_mobile_numbers">Aktivera för att endast visa mobilnummer i mottagarfältet</string>
+    <string name="pref_title_mms_email_addr_completion">Ifyllande av e-postadresser</string>
+    <string name="pref_summary_mms_email_addr_completion">Aktivera/inaktivera automatiskt ifyllande av e-postadresser i mottagarfältet</string>
+    <string name="pref_title_mms_message_font_size">Fontstorlek för meddelande</string>
+    <string name="pref_summary_mms_message_font_size">Ändra fontstorlek i meddelandevyn</string>
+    <string name="pref_dialogtitle_mms_message_font_size">Välj fontstorlek</string>
+    <string name="pref_title_mms_notification_vibrate_settings">Inställningar för vibration</string>
+    <string name="pref_title_mms_notification_vibrate_pattern">Vibrationsmönster</string>
+    <string name="pref_summary_mms_notification_vibrate_pattern">Ändra vibrationsmönster</string>
+    <string name="pref_title_mms_notification_vibrate_call">Vibrera under samtal</string>
+    <string name="pref_summary_mms_notification_vibrate_call">Tillåt vibrationer under samtal</string>
+    <string name="pref_title_mms_notification_vibrate_custom">Anpassat vibrationsmönster</string>
+    <string name="pref_text_mms_notification_vibrate_custom">Formatera på/av i millisekunder: av, på, av, på, ...</string>
+    <string name="pref_title_mms_send_on_enter">Skicka med Enter</string>
+    <string name="pref_summary_mms_send_on_enter">Aktivera/inaktivera meddelandesändning genom att trycka på Enter</string>
+    <string name="prefs_templates_settings">SMS-mallar</string>
+    <string name="pref_title_templates_manage">Mallar</string>
+    <string name="pref_summary_templates_manage">Hantera dina SMS-mallar</string>
+    <string name="pref_title_templates_show_gesture">Gester</string>
+    <string name="pref_summary_templates_show_gesture">Visa gest-spår</string>
+    <string name="pref_title_template_gestures_sensitivity">Gestkänsliget</string>
+    <string name="template_save">Spara</string>
+    <string name="template_insert_hint">Skriv in texten för mallen här</string>
+    <string name="template_empty_text">Textfältet kan inte vara tomt</string>
+    <string name="template_explanation">Lägg in eller ändra mallens text och rita en gest för att associera den (valbart)</string>
+    <string name="template_edit">Ändra</string>
+    <string name="template_delete">Ta bort</string>
+    <string name="template_ctx_menu_title">Handlingar</string>
+    <string name="template_list_title">Mallar</string>
+    <string name="template_edit_title">Ändra mall</string>
+    <string name="template_new_title">Ny mall</string>
+    <string name="template_insert">Lägg in mall</string>
+    <string name="template_insert_ctx_menu_title">Ändra text</string>
+    <string name="template_gesture_draw">Rita gesten i utrymmet nedan</string>
+    <string name="template_not_present_error">Du har inte definierat någon mall</string>
+    <string name="template_not_present_error_title">Fel</string>
+    <string name="template_select">Välj en mall</string>
+    <string name="template_cancel_confirm_title">Varning</string>
+    <string name="template_cancel_confirm_text">Vill du avbryta?</string>
+    <string name="gestures_already_present">Varning: En liknande gest är associerad med en annan mall!</string>
+    <string name="toast_phone_goggles">Du tillåts inte skickas SMS just nu. Försök igen senare.</string>
+    <string name="dialog_phone_goggles_title">SMS blockerat</string>
+    <string name="dialog_phone_goggles_title_unlocked">SMS godkänt</string>
+    <string name="dialog_phone_goggles_content">Det kanske inte är så klokt att skicka ett SMS just nu. Är du säker på att du vill fortsätta?</string>
+    <string name="dialog_phone_goggles_unauthorized">Det kanske inte är så klokt att skicka ett SMS just nu.</string>
+    <string name="dialog_phone_goggles_ok">Skicka</string>
+    <string name="dialog_phone_goggles_cancel">Spara utkast</string>
 </resources>

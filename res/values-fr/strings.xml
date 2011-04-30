@@ -192,6 +192,7 @@
     <string name="pref_summary_mms_auto_retrieval" msgid="925163257363757048">"Récupérer automatiquement les messages"</string>
     <string name="pref_title_mms_retrieval_during_roaming" msgid="6016227402731817804">"Itinérance"</string>
     <string name="pref_summary_mms_retrieval_during_roaming" msgid="2427892806582531020">"Récupérer automatiquement les messages en itinérance"</string>
+    <string name="pref_title_save_location">Dossier sauvegarde pièces jointes</string>
     <string name="to_label" msgid="2355268818058389047">"À "</string>
     <string name="confirm_dialog_title" msgid="5810813994465120375">"Supprimer"</string>
     <string name="confirm_dialog_locked_title" msgid="8179085718150932242">"Supprimer le message verrouillé ?"</string>
@@ -284,7 +285,7 @@
     <string name="message_failed_body" msgid="2740907094762116644">"Sélectionnez le message pour le relire, puis réessayez."</string>
     <string name="download_later" msgid="4486286146421650880">"Téléchargement impossible pour l\'instant. Merci de réessayer ultérieurement."</string>
     <string name="select_audio" msgid="3120822451872772124">"Sélectionnez un fichier audio"</string>
-    <string name="copy_to_sdcard" msgid="757028609638184856">"Enregistrer la PJ"</string>
+    <string name="copy_to_sdcard" msgid="757028609638184856">"Enregistrer le fichier"</string>
     <string name="copy_to_sdcard_success" msgid="6940309183311068648">"Pièce jointe enregistrée"</string>
     <string name="copy_to_sdcard_fail" msgid="4209780336940754675">"Impossible d\'enregistrer la PJ"</string>
     <string name="save_ringtone" msgid="2310157075045201051">"Enregistrer comme sonnerie"</string>
@@ -335,4 +336,64 @@
     <string name="sending_message" msgid="222836893217450538">"Envoi en cours…"</string>
     <string name="error_state" msgid="5177386717626893507">"État incohérent"</string>
     <string name="error_state_text" msgid="5006221625000536698">"L\'état des fils de discussion et des destinataires n\'est pas cohérent. Générez un rapport sur les bugs et envoyez-le à android-sms-bugs@google.com"</string>
+
+    <!-- Extra Settings: -->
+    <string name="pref_extra_settings">Paramètres supplémentaires</string>
+
+    <!-- Back to all threads -->
+    <string name="pref_title_mms_back_to_all_threads">Retour à la liste des fils</string>
+    <string name="pref_summary_mms_back_to_all_threads">Aller à la liste des fils lorsque la touche retour est appuyée</string>
+
+    <!-- Toggle setting for enable/disable Black Background -->
+    <string name="pref_title_mms_black_background">Fond noir</string>
+    <string name="pref_summary_mms_black_background">Rendre l\'arrière-plan noir\n(Relancer l\'application)</string>
+
+    <!-- Custom user-agent -->
+    <string name="pref_mms_custom_option">Personnalisé...</string>
+    <string name="pref_title_mms_user_agent">User-Agent personnalisé</string>
+    <string name="pref_summary_mms_user_agent">Se faire passer pour un autre modèle de téléphone pour les MMS</string>
+    <string name="pref_mms_user_agent_custom_set">User-Agent réglé à :\n</string>
+
+    <!-- Full timestamps -->
+    <string name="pref_title_mms_full_timestamp">Horodatages complets</string>
+    <string name="pref_summary_mms_full_timestamp">Activer pour afficher la date et l\'heure dans l\'horodatage des messages</string>
+
+    <!-- Which timestamps -->
+    <string name="pref_title_mms_use_sent_timestamp">Horodatages originaux</string>
+    <string name="pref_summary_mms_use_sent_timestamp">Afficher et stocker la date d\'envoi au lieu de la date de réception</string>
+
+    <!-- Only mobile numbers -->
+    <string name="pref_title_only_mobile_numbers">Seulement numéros mobiles</string>
+    <string name="pref_summary_only_mobile_numbers">N\'afficher que les numéros mobiles dans le champ destinataire</string>
+
+    <!-- Email address completion -->
+    <string name="pref_title_mms_email_addr_completion">Auto-complétion e-mail</string>
+    <string name="pref_summary_mms_email_addr_completion">Activer la complétion automatique des adresses e-mail dans le champ destinataire</string>
+
+    <!-- Message Font size -->
+    <string name="pref_title_mms_message_font_size">Taille de la police</string>
+    <string name="pref_summary_mms_message_font_size">Changer la taille de la police utilisée pour afficher les messages</string>
+    <string name="pref_dialogtitle_mms_message_font_size">Choisir la taille de la police</string>
+
+    <!-- Change Vibrate pattern/method for message notification -->
+    <string name="pref_title_mms_notification_vibrate_settings">Paramètres du vibreur</string>
+    <string name="pref_title_mms_notification_vibrate_pattern">Séquence de vibration</string>
+    <string name="pref_summary_mms_notification_vibrate_pattern">Changer la séquence de vibration</string>
+    <string name="pref_title_mms_notification_vibrate_call">Vibrer en appel</string>
+    <string name="pref_summary_mms_notification_vibrate_call">Autoriser la vibration lors d\'un appel</string>
+    <string name="pref_title_mms_notification_vibrate_custom">Séquence de vibration personalisée</string>
+    <string name="pref_text_mms_notification_vibrate_custom">Format repos/vibre en millisecondes: repos, vibre, repos, vibre, ...</string>
+
+    <!-- Send on enter -->
+    <string name="pref_title_mms_send_on_enter">Envoyer avec entrée</string>
+    <string name="pref_summary_mms_send_on_enter">Envoyer le message lorsque la touche entrée est appuyée</string>
+
+    <!-- Phone goggles -->
+    <string name="toast_phone_goggles">Vous n\'êtes pas autorisé a envoyer des SMS pour le moment. Veuillez réitérer votre demande plus tard.</string>
+    <string name="dialog_phone_goggles_title">Appel bloqué</string>
+    <string name="dialog_phone_goggles_title_unlocked">Appel autorisé</string>
+    <string name="dialog_phone_goggles_content">Envoyer un SMS n\'est pas recommandé pour le moment. Etes vous sûr de vouloir continuer ?</string>
+    <string name="dialog_phone_goggles_unauthorized">Envoyer un SMS n\'est pas recommandé pour le moment.</string>
+    <string name="dialog_phone_goggles_ok">Envoyer</string>
+    <string name="dialog_phone_goggles_cancel">Enregistrer</string>
 </resources>

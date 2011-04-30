@@ -141,6 +141,8 @@ import com.android.mms.ui.RecipientsEditor.RecipientContextMenuInfo;
 import com.android.mms.util.SendingProgressTokenManager;
 import com.android.mms.util.SmileyParser;
 
+import android.text.InputFilter.LengthFilter;
+
 /**
  * This is the main UI for:
  * 1. Composing a new message;
@@ -421,6 +423,11 @@ public class ComposeMessageActivity extends Activity
              */
         int msgCount = params[0];
         int remainingInCurrentMessage = params[2];
+
+        if (!MmsConfig.getMultipartSmsEnabled()) {
+            mWorkingMessage.setLengthRequiresMms(
+                    msgCount >= MmsConfig.getSmsToMmsTextThreshold(), true);
+        }
 
         // Show the counter only if:
         // - We are not in MMS mode
@@ -2938,6 +2945,8 @@ public class ComposeMessageActivity extends Activity
         mTextEditor = (EditText) findViewById(R.id.embedded_text_editor);
         mTextEditor.setOnEditorActionListener(this);
         mTextEditor.addTextChangedListener(mTextEditorWatcher);
+        mTextEditor.setFilters(new InputFilter[] {
+                new LengthFilter(MmsConfig.getMaxTextLimit())});
         mTextCounter = (TextView) findViewById(R.id.text_counter);
         mSendButton = (Button) findViewById(R.id.send_button);
         mSendButton.setOnClickListener(this);

@@ -108,6 +108,7 @@
     <string name="cannot_send_message" msgid="3918913277571649400">"Nachricht kann nicht gesendet werden."</string>
     <string name="cannot_send_message_reason" msgid="8745080126044054343">"Für die Nachricht sind keine gültigen Empfänger vorhanden."</string>
     <string name="cannot_forward_drm_obj" msgid="84606990079390099">"Das in der Nachricht enthaltene DRM-Objekt kann nicht weitergeleitet werden."</string>
+    <string name="cannot_find_contact">Der Kontakt konnte nicht angehängt werden.</string>
     <string name="converting_to_picture_message" msgid="2980023239017588627">"Konvertierung in Multimedia-Nachricht wird ausgeführt..."</string>
     <string name="converting_to_text_message" msgid="6374423235426015422">"Konvertierung in Textnachricht wird ausgeführt..."</string>
     <string name="cannot_add_slide_anymore" msgid="8437666385579890987">"Es können keine weiteren Dias hinzugefügt werden."</string>
@@ -167,6 +168,12 @@
     <string name="pref_summary_mms_delivery_reports" msgid="4874657984217756112">"Zustellbestätigung für jede gesendete Nachricht anfordern"</string>
     <string name="pref_summary_mms_read_reports" msgid="2748323864008907440">"Lesebestätigung für jede gesendete Nachricht anfordern"</string>
     <string name="pref_summary_sms_delivery_reports" msgid="5852207702358546129">"Zustellbestätigung für jede gesendete Nachricht anfordern"</string>
+
+    <string name="pref_title_sms_split_160">SMS-Teilung</string>
+    <string name="pref_summary_sms_split_160">SMS-Nachricht alle 160 Zeichen teilen</string>
+    <string name="pref_title_sms_split_counter">Zähler in SMS</string>
+    <string name="pref_summary_sms_split_counter">Fügt der Nachricht einen Zähler hinzu, zB. (1/2)</string>
+
     <string name="pref_summary_auto_delete" msgid="7719538116486177613">"Alte Nachrichten beim Erreichen der Grenzwerte löschen"</string>
     <string name="pref_summary_delete_limit" msgid="597128041393045216">"<xliff:g id="COUNT">%1$s</xliff:g> Nachrichten pro Konversation"</string>
     <string name="pref_title_manage_sim_messages" msgid="7820895261757881177">"Nachrichten auf SIM-Karte"</string>
@@ -192,6 +199,10 @@
     <string name="pref_summary_mms_auto_retrieval" msgid="925163257363757048">"Nachrichten automatisch empfangen"</string>
     <string name="pref_title_mms_retrieval_during_roaming" msgid="6016227402731817804">"Autom. Roaming-Abruf"</string>
     <string name="pref_summary_mms_retrieval_during_roaming" msgid="2427892806582531020">"Bei Roaming Nachrichten automatisch abrufen"</string>
+
+    <!-- Setting item for folder to save MMS Attachments to -->
+    <string name="pref_title_save_location">Speicherort für Anhänge</string>
+
     <string name="to_label" msgid="2355268818058389047">"An "</string>
     <string name="confirm_dialog_title" msgid="5810813994465120375">"Löschen"</string>
     <string name="confirm_dialog_locked_title" msgid="8179085718150932242">"Gesperrte Nachricht entfernen?"</string>
@@ -253,6 +264,7 @@
     <string name="attach_sound" msgid="3149325985970669609">"Audio"</string>
     <string name="attach_record_sound" msgid="6011431304469858929">"Audio aufnehmen"</string>
     <string name="attach_slideshow" msgid="3497422151091037063">"Diashow"</string>
+    <string name="attach_contact_info">Kontaktinformation</string>
     <string name="select_bottom_text" msgid="4201966447623311931">"Text unten"</string>
     <string name="select_top_text" msgid="6734183477539197815">"Text oben"</string>
     <string name="delivery_toast_body" msgid="4478305651728684364">"Nachricht erhalten von %s"</string>
@@ -335,4 +347,95 @@
     <string name="sending_message" msgid="222836893217450538">"Wird gesendet…"</string>
     <string name="error_state" msgid="5177386717626893507">"Uneinheitlicher Status"</string>
     <string name="error_state_text" msgid="5006221625000536698">"Der Status von Threads und Empfängern ist uneinheitlich. Bitte erstellen Sie einen Fehlerbericht und senden Sie ihn an android-sms-bugs@google.com."</string>
+
+    <!-- Extra Settings: -->
+    <string name="pref_extra_settings">Extra-Einstellungen</string>
+
+    <string name="pref_title_mms_back_to_all_threads">Zurück zu allen Nachrichten</string>
+    <string name="pref_summary_mms_back_to_all_threads">Mit ZURÜCK-Taste immer zur Nachrichtenübersicht zurückkehren</string>
+
+    <!-- Toggle setting for enable/disable Black Background -->
+    <string name="pref_title_mms_black_background">Schwarzer Hintergrund</string>
+    <string name="pref_summary_mms_black_background">Ein/Ausschalten des schwarzen Hintergrunds\n(MMS Neustart)</string>
+
+    <!-- Toggle setting for always show character counter -->
+    <string name="pref_title_show_counter_always">Zeichenzähler immer ein</string>
+    <string name="pref_summary_show_counter_always">Beim Verfassen einer Nachricht immer den Zähler für bereits eingegebene Zeichen anzeigen</string>
+
+    <!-- Custom user-agent -->
+    <string name="pref_mms_custom_option">Anderer...</string>
+    <string name="pref_title_mms_user_agent">Anderer User-Agent</string>
+    <string name="pref_summary_mms_user_agent">Das Gerät für MMS als ein anderes Modell ausgeben lassen.</string>
+    <string name="pref_mms_user_agent_custom_set">eingestellter User-Agent:\n</string>
+
+    <!-- Full timestamps -->
+    <string name="pref_title_mms_full_timestamp">Volle Datumsangabe</string>
+    <string name="pref_summary_mms_full_timestamp">Datum und Zeit der Nachricht anzeigen</string>
+
+    <!-- Which timestamps -->
+    <string name="pref_title_mms_use_sent_timestamp">Originale Datumsangabe</string>
+    <string name="pref_summary_mms_use_sent_timestamp">Sendedatum und Sendezeit der Nachricht anzeigen und speichern statt der Daten vom Empfangszeitpunkt</string>
+
+    <!-- Only mobile numbers -->
+    <string name="pref_title_only_mobile_numbers">Nur mobile Rufnummern</string>
+    <string name="pref_summary_only_mobile_numbers">Im Empfängerfeld nur Nummern von Mobiltelefonen vorschlagen</string>
+
+    <!-- Email address completion -->
+    <string name="pref_title_mms_email_addr_completion">Email-Vervollständigung</string>
+    <string name="pref_summary_mms_email_addr_completion">Ein/Ausschalten der Auto-Vervollständigung für Email-Adressen im Empfängerfeld</string>
+
+    <!-- Message Font size -->
+    <string name="pref_title_mms_message_font_size">Schriftgröße</string>
+    <string name="pref_summary_mms_message_font_size">Die Schriftgröße in der Nachrichtenansicht ändern</string>
+    <string name="pref_dialogtitle_mms_message_font_size">Schriftgröße wählen</string>
+
+    <!-- Change Vibrate pattern/method for message notification -->
+    <string name="pref_title_mms_notification_vibrate_settings">Vibrationseinstellungen</string>
+    <string name="pref_title_mms_notification_vibrate_pattern">Vibrationsmuster</string>
+    <string name="pref_summary_mms_notification_vibrate_pattern">Vibrationsmuster ändern</string>
+    <string name="pref_title_mms_notification_vibrate_call">Vibrieren bei Anruf</string>
+    <string name="pref_summary_mms_notification_vibrate_call">Das Vibrieren während eines Anrufs erlauben</string>
+    <string name="pref_title_mms_notification_vibrate_custom">Anderes Vibrationsmuster</string>
+    <string name="pref_text_mms_notification_vibrate_custom">Format aus/an in Millisekunden: aus, an, aus, an, ...</string>
+
+    <string name="pref_title_mms_send_on_enter">Senden mit Enter</string>
+    <string name="pref_summary_mms_send_on_enter">Nachricht senden nach Drücken der ENTER-Taste</string>
+
+    <!-- Sms templates -->
+    <string name="prefs_templates_settings">SMS Vorlagen</string>
+    <string name="pref_title_templates_manage">Vorlagen</string>
+    <string name="pref_summary_templates_manage">SMS Vorlagen verwalten</string>
+    <string name="pref_title_templates_show_gesture">Geste</string>
+    <string name="pref_summary_templates_show_gesture">Zeige Spur der Geste</string>
+    <string name="pref_title_template_gestures_sensitivity">Gesten-Sensitivität</string>
+    <string name="template_save">Speichern</string>
+    <string name="template_insert_hint">Hier den Vorlagentext eingeben</string>
+    <string name="template_empty_text">Das Textfeld darf nicht leer sein</string>
+    <string name="template_explanation">Vorlagentext eingeben oder bearbeiten und
+        wahlweise
+        eine Geste zeichnen und zuordnen</string>
+    <string name="template_edit">Bearbeiten</string>
+    <string name="template_delete">Löschen</string>
+    <string name="template_ctx_menu_title">Aktionen</string>
+    <string name="template_list_title">Vorlagen</string>
+    <string name="template_edit_title">Vorlage bearbeiten</string>
+    <string name="template_new_title">Neue Vorlage</string>
+    <string name="template_insert">Vorlage einfügen</string>
+    <string name="template_insert_ctx_menu_title">Text bearbeiten</string>
+    <string name="template_gesture_draw">Die Geste im unteren Feld zeichnen</string>
+    <string name="template_not_present_error">Du hast keine Vorlage definiert</string>
+    <string name="template_not_present_error_title">Fehler</string>
+    <string name="template_select">Eine Vorlage auswählen</string>
+    <string name="template_cancel_confirm_title">Warnung</string>
+    <string name="template_cancel_confirm_text">Möchstes du abbrechen?</string>
+    <string name="gestures_already_present">Warnung: Eine ähnliche Geste ist mit einer anderen Vorlage verknüpft!</string>
+
+   <!-- Phone goggles -->
+    <string name="toast_phone_goggles">Du darfst zur Zeit keine SMS senden. Bitte später erneut versuchen.</string>
+    <string name="dialog_phone_goggles_title">SMS blockiert</string>
+    <string name="dialog_phone_goggles_title_unlocked">SMS erlaubt</string>
+    <string name="dialog_phone_goggles_content">Jetzt eine SMS zu senden wäre nicht sehr schlau. Sicher, dass du fortfahren willst?</string>
+    <string name="dialog_phone_goggles_unauthorized">Jetzt eine SMS zu senden wäre nicht sehr schlau.</string>
+    <string name="dialog_phone_goggles_ok">Senden</string>
+    <string name="dialog_phone_goggles_cancel">Entwurf speichern</string>
 </resources>

@@ -56,4 +56,29 @@
     <item msgid="6334637439528489607">"Śmieje się"</item>
     <item msgid="7602915122893958066">"Zakłopotany"</item>
   </string-array>
+  <string-array name="pref_mms_user_agent_entries">
+        <item>Domyślny Android</item>
+        <item>Nokia N95</item>
+        <item>iPhone (3.0)</item>
+        <item>BlackBerry 8800</item>
+        <item>Sony Ericsson W800i</item>
+        <item>SoftBank X01T</item>
+        <item>@string/pref_mms_custom_option</item>
+    </string-array>
+    <string-array name="pref_mms_message_font_size_entries">
+        <item>10</item>
+        <item>12</item>
+        <item>14</item>
+        <item>16</item>
+        <item>18 (domyślny)</item>
+        <item>20</item>
+    </string-array>
+    <string-array name="pref_mms_notification_vibrate_pattern_entries">
+      <item>Zwykły</item>
+      <item>Średni</item>
+      <item>Długi</item>
+      <item>Kilka krótkich</item>
+      <item>Kilka długich</item>
+      <item>@string/pref_mms_custom_option</item>
+   </string-array>
 </resources>

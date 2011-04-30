@@ -335,4 +335,77 @@
     <string name="sending_message" msgid="222836893217450538">"Küldés…"</string>
     <string name="error_state" msgid="5177386717626893507">"Inkonzisztens állapot"</string>
     <string name="error_state_text" msgid="5006221625000536698">"A beszélgetések és a címzettek állapota inkonzisztens. Kérjük, készítsen egy programhiba-jelentést, és küldje el az android-sms-bugs@google.com címre."</string>
+
+    <string name="cannot_find_contact">A kiválasztott kapcsolat nem csatolható.</string>
+    <string name="pref_title_sms_split_160">SMS bontása</string>
+    <string name="pref_summary_sms_split_160">Minden üzenet bontása 160 karakterenként</string>
+    <string name="pref_title_sms_split_counter">Szétbontás számláló</string>
+    <string name="pref_summary_sms_split_counter">Számláló hozzáadása az üzenethez mint (1/2)</string>
+    <string name="pref_title_save_location">Mellékletmentés mappája</string>
+    <string name="attach_contact_info">Kapcsolat információ</string>
+    <string name="pref_extra_settings">Extra beállítások</string>
+    <string name="pref_title_mms_back_to_all_threads">Vissza az összes beszélgetési szálhoz</string>
+    <string name="pref_summary_mms_back_to_all_threads">Mindig térjen vissza az összes beszélgetési szálhoz, ha a vissza gombot megnyomják</string>
+    <string name="pref_title_mms_black_background">Fekete háttér</string>
+    <string name="pref_summary_mms_black_background">Fekete háttér engedélyezése/tiltása\n(MMS újrakezdés)</string>
+    <string name="pref_title_show_counter_always">Számláló megjelenítése</string>
+    <string name="pref_summary_show_counter_always">Mindig jelenjen meg a számláló az üzenetek létrehozásakor</string>
+    <string name="pref_mms_custom_option">Egyéni..</string>
+    <string name="pref_title_mms_user_agent">Egyéni felhasználói ügynök</string>
+    <string name="pref_summary_mms_user_agent">Ál telefontípus használata MMS küldéshez</string>
+    <string name="pref_mms_user_agent_custom_set">Egyéni felhasználói ügynök értéke:\n</string>
+    <string name="pref_title_mms_full_timestamp">Teljes időbélyegek</string>
+    <string name="pref_summary_mms_full_timestamp">Dátum és idő mutatásának engedélyezése az időbélyegen</string>
+    <string name="pref_title_mms_use_sent_timestamp">Eredeti időbélyeg használata</string>
+    <string name="pref_summary_mms_use_sent_timestamp">Megjeleníti és eltárolja a feladás dátumát</string>
+    <string name="pref_title_only_mobile_numbers">Csak a mobil számok</string>
+    <string name="pref_summary_only_mobile_numbers">A címzett mezőben csak mobilszámok jelenjenek meg</string>
+    <string name="pref_title_mms_email_addr_completion">E-mail cím befejezése</string>
+    <string name="pref_summary_mms_email_addr_completion">E-mail cím automatikus kiegészítésének be/ki kapcsolása a címzett mezőben</string>
+    <string name="pref_title_mms_message_font_size">Üzenet betűméret</string>
+    <string name="pref_summary_mms_message_font_size">Üzenetnézet betűméretének megadása</string>
+    <string name="pref_dialogtitle_mms_message_font_size">Betűméret-választás</string>
+    <string name="pref_title_mms_notification_vibrate_settings">Rezgési beállítások</string>
+    <string name="pref_title_mms_notification_vibrate_pattern">Rezgési mód</string>
+    <string name="pref_summary_mms_notification_vibrate_pattern">Rezgési mód megváltoztatása</string>
+    <string name="pref_title_mms_notification_vibrate_call">Rezgés híváskor</string>
+    <string name="pref_summary_mms_notification_vibrate_call">Hívás közbeni rezgés engedélyezése</string>
+    <string name="pref_title_mms_notification_vibrate_custom">Egyéni rezgési mintázat</string>
+    <string name="pref_text_mms_notification_vibrate_custom">Formátum - ki/be milliszekundumban: ki, be, ki, be, ...</string>
+    <string name="pref_title_mms_send_on_enter">Enter lenyomásakor küldés</string>
+    <string name="pref_summary_mms_send_on_enter">Enter lenyomásakor azonnali küldés engedélyezése/tiltása</string>
+    <string name="prefs_templates_settings">SMS sablonok</string>
+    <string name="pref_title_templates_manage">Sablonok</string>
+    <string name="pref_summary_templates_manage">SMS sablonok kezelése</string>
+    <string name="pref_title_templates_show_gesture">Gesztusok</string>
+    <string name="pref_summary_templates_show_gesture">Gesztusok követésének megjelenítése</string>
+    <string name="pref_title_template_gestures_sensitivity">Gesztusok érzékenysége</string>
+    <string name="template_save">Mentés</string>
+    <string name="template_insert_hint">Írja be a minta szöveget</string>
+    <string name="template_empty_text">A szövegmező nem lehet üres</string>
+    <string name="template_explanation">Illessze be vagy módosítsa a sablon szöveget és
+        ha szeretné
+        rajzoljon egy gesztust, amihez hozzárendelheti</string>
+    <string name="template_edit">Szerkeszt</string>
+    <string name="template_delete">Törlés</string>
+    <string name="template_ctx_menu_title">Parancsok</string>
+    <string name="template_list_title">Sablonok</string>
+    <string name="template_edit_title">Sablon szerkesztése</string>
+    <string name="template_new_title">Sablon létrehozása</string>
+    <string name="template_insert">Sablon beillesztése</string>
+    <string name="template_insert_ctx_menu_title">Szöveg szerkesztése</string>
+    <string name="template_gesture_draw">Rajzoljon egy gesztust az üres helyre</string>
+    <string name="template_not_present_error">Nincs beállított sablon</string>
+    <string name="template_not_present_error_title">Hiba</string>
+    <string name="template_select">Sablon kiválasztása</string>
+    <string name="template_cancel_confirm_title">Figyelmeztetés</string>
+    <string name="template_cancel_confirm_text">Meg szeretné szakítani?</string>
+    <string name="gestures_already_present">Figyelmeztetés: Már létezik egy hasonló gesztus egy másik sablonhoz rendelve!</string>
+    <string name="toast_phone_goggles">Jelenleg nem engedélyezett az SMS küldés. Kérjük, hogy próbálkozzon később.</string>
+    <string name="dialog_phone_goggles_title">SMS blokkolva</string>
+    <string name="dialog_phone_goggles_title_unlocked">SMS engedélyezve</string>
+    <string name="dialog_phone_goggles_content">Az SMS küldés jelenleg nem javasolt. Biztosan folytatni akarja?</string>
+    <string name="dialog_phone_goggles_unauthorized">Az SMS küldés lehet, hogy nem javasolt.</string>
+    <string name="dialog_phone_goggles_ok">Mentés</string>
+    <string name="dialog_phone_goggles_cancel">Mentés piszkozatként</string>
 </resources>

@@ -56,4 +56,43 @@
     <item msgid="6334637439528489607">"Skrattar"</item>
     <item msgid="7602915122893958066">"Förvirrad"</item>
   </string-array>
+  <string-array name="pref_mms_user_agent_entries">
+    <item>Standard Android</item>
+    <item>Nokia N95</item>
+    <item>iPhone (3.0)</item>
+    <item>BlackBerry 8800</item>
+    <item>Sony Ericsson W800i</item>
+    <item>SoftBank X01T</item>
+    <item>@string/pref_mms_custom_option</item>
+  </string-array>
+  <string-array name="pref_mms_message_font_size_entries">
+    <item>10</item>
+    <item>12</item>
+    <item>14</item>
+    <item>16</item>
+    <item>18 (Standard)</item>
+    <item>20</item>
+  </string-array>
+  <string-array name="pref_mms_notification_vibrate_pattern_entries">
+    <item>Normal</item>
+    <item>Medium Vibration</item>
+    <item>Lång Vibration</item>
+    <item>Flera korta</item>
+    <item>Flera långa</item>
+    <item>@string/pref_mms_custom_option</item>
+  </string-array>
+  <string-array name="pref_templates_gestures_sensitivity_entries">
+    <item>1 (bredast)</item>
+    <item>2</item>
+    <item>3</item>
+    <item>4</item>
+    <item>5</item>
+    <item>6</item>
+    <item>7</item>
+    <item>8</item>
+    <item>9</item>
+    <item>10</item>
+    <item>11</item>
+    <item>12 (striktast)</item>
+  </string-array>
 </resources>

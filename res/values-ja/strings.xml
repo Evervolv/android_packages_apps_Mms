@@ -163,11 +163,11 @@
     <string name="pref_mms_settings_title" msgid="2573616208360684392">"マルチメディアメッセージ（MMS）の設定"</string>
     <string name="pref_sms_settings_title" msgid="9088516111717417514">"テキストメッセージ（SMS）の設定"</string>
     <string name="pref_sms_storage_title" msgid="2531726671883516470">"ストレージの設定"</string>
-    <string name="pref_summary_manage_sim_messages" msgid="4141349892597640864">"SIMカードに保存したメッセージを管理"</string>
+    <string name="pref_summary_manage_sim_messages" msgid="4141349892597640864">"SIMカードに保存したメッセージを管理する"</string>
     <string name="pref_summary_mms_delivery_reports" msgid="4874657984217756112">"送信するメッセージの受取確認を毎回要求する"</string>
     <string name="pref_summary_mms_read_reports" msgid="2748323864008907440">"送信する全メッセージに対して開封確認レポートを要求する"</string>
     <string name="pref_summary_sms_delivery_reports" msgid="5852207702358546129">"送信するメッセージの受取確認を毎回要求する"</string>
-    <string name="pref_summary_auto_delete" msgid="7719538116486177613">"上限に達したら古いメッセージを削除"</string>
+    <string name="pref_summary_auto_delete" msgid="7719538116486177613">"上限に達したら古いメッセージを削除する"</string>
     <string name="pref_summary_delete_limit" msgid="597128041393045216">"スレッドごとに<xliff:g id="COUNT">%1$s</xliff:g>件のメッセージ"</string>
     <string name="pref_title_manage_sim_messages" msgid="7820895261757881177">"SIMカードのメッセージ"</string>
     <string name="pref_title_mms_delivery_reports" msgid="6666857926679451910">"受取確認通知"</string>
@@ -189,7 +189,7 @@
   </string-array>
     <string name="prefDialogTitle_vibrateWhen" msgid="6419655771690242118">"バイブレーション"</string>
     <string name="pref_title_mms_auto_retrieval" msgid="4021878285474431355">"自動で取得"</string>
-    <string name="pref_summary_mms_auto_retrieval" msgid="925163257363757048">"メッセージを自動的に取得"</string>
+    <string name="pref_summary_mms_auto_retrieval" msgid="925163257363757048">"メッセージを自動的に取得する"</string>
     <string name="pref_title_mms_retrieval_during_roaming" msgid="6016227402731817804">"ローミング時に自動取得"</string>
     <string name="pref_summary_mms_retrieval_during_roaming" msgid="2427892806582531020">"ローミング中にメッセージを自動的に取得する"</string>
     <string name="to_label" msgid="2355268818058389047">"To "</string>
@@ -335,4 +335,92 @@
     <string name="sending_message" msgid="222836893217450538">"送信中..."</string>
     <string name="error_state" msgid="5177386717626893507">"データの不整合"</string>
     <string name="error_state_text" msgid="5006221625000536698">"スレッドや宛先のデータに不整合があります。バグレポートをキャプチャして android-sms-bugs@google.com に送信してください。"</string>
+
+    <!-- CyanogenMod -->
+    <string name="pref_title_mms_use_sent_timestamp">オリジナルの送信時刻を使用</string>
+    <string name="pref_summary_mms_use_sent_timestamp">受信日時ではなく、送信日時を保存及び表示する</string>
+    <string name="pref_extra_settings">拡張設定</string>
+
+    <string name="pref_title_mms_back_to_all_threads">スレッド一覧に戻る</string>
+    <string name="pref_summary_mms_back_to_all_threads">戻るボタンを押したときは常にすべてのスレッド一覧へ戻る</string>
+    <string name="attach_contact_info">連絡先</string>
+    <string name="cannot_find_contact">選択した連絡先情報は添付できませんでした。</string>
+    <string name="pref_title_sms_split_160">SMS分割</string>
+    <string name="pref_summary_sms_split_160">160文字ごとにメッセージを分割してSMSを送信する</string>
+    <string name="pref_title_sms_split_counter">分割カウンター</string>
+    <string name="pref_summary_sms_split_counter">作成画面に分割カウンターを表示する 例: (1/2)</string>
+
+    <!-- Toggle setting for always show character counter -->
+    <string name="pref_title_show_counter_always">常に文字数を表示</string>
+    <string name="pref_summary_show_counter_always">メッセージを作成中常に文字数のカウンターを表示する</string>
+
+    <string name="pref_mms_custom_option">カスタム..</string>
+    <string name="pref_title_mms_user_agent">カスタムUser-Agent</string>
+    <string name="pref_summary_mms_user_agent">MMSクライアントのUser-Agent文字列を変更する</string>
+    <string name="pref_mms_user_agent_custom_set">設定されているUser-Agent:\n</string>
+    <string name="pref_title_only_mobile_numbers">携帯番号のみ</string>
+    <string name="pref_summary_only_mobile_numbers">宛先フィールドには携帯電話の番号のみ表示する</string>
+    <string name="pref_title_mms_email_addr_completion">メールアドレス補完</string>
+    <string name="pref_summary_mms_email_addr_completion">宛先フィールドでメールアドレスの自動補完を有効にする</string>
+    <string name="pref_title_mms_black_background">黒い背景</string>
+    <string name="pref_summary_mms_black_background">黒い背景を使用するかどうか切り替える(要Mms再起動)</string>
+
+    <string name="pref_title_mms_full_timestamp">送信日時を省略しない</string>
+    <string name="pref_summary_mms_full_timestamp">送信日時を日付と時刻を含む完全な書式で表示する</string>
+
+    <!-- Message Font size -->
+    <string name="pref_title_mms_message_font_size">メッセージフォントサイズ</string>
+    <string name="pref_summary_mms_message_font_size">メッセージビューのフォントサイズを変更する</string>
+    <string name="pref_dialogtitle_mms_message_font_size">フォントサイズを選択</string>
+    <string name="pref_title_save_location">添付ファイルの保存先</string>
+
+    <!-- Change Vibrate pattern/method for message notification -->
+    <string name="pref_title_mms_notification_vibrate_settings">振動</string>
+    <string name="pref_title_mms_notification_vibrate_pattern">パターン</string>
+    <string name="pref_summary_mms_notification_vibrate_pattern">パターン変更</string>
+    <string name="pref_title_mms_notification_vibrate_call">通話時に振動</string>
+    <string name="pref_summary_mms_notification_vibrate_call">通話中に振動を許可する</string>
+    <string name="pref_title_mms_notification_vibrate_custom">カスタムパターン</string>
+    <string name="pref_text_mms_notification_vibrate_custom">書式はオフ/オンのミリ秒: オフ, オン, オフ, オン, ...</string>
+
+    <!-- Send on Enter -->
+    <string name="pref_title_mms_send_on_enter">Enterキーで送信</string>
+    <string name="pref_summary_mms_send_on_enter">Enterキーの押下でメッセージを送信するかどうか切り替える</string>
+
+    <!-- Sms templates -->
+    <string name="prefs_templates_settings">メッセージテンプレート</string>
+    <string name="pref_title_templates_manage">テンプレート</string>
+    <string name="pref_summary_templates_manage">メッセージのテンプレートを管理する</string>
+    <string name="pref_title_templates_show_gesture">ジェスチャー</string>
+    <string name="pref_summary_templates_show_gesture">ジェスチャーの軌跡を表示する</string>
+    <string name="pref_title_template_gestures_sensitivity">ジェスチャーの感度</string>
+    <string name="template_save">保存</string>
+    <string name="template_insert_hint">ここにテンプレートテキストを挿入する</string>
+    <string name="template_empty_text">テキストフィールドは空にできません</string>
+    <string name="template_explanation">テンプレートテキストを挿入するか変更して、オプションでジェスチャーを設定することができます。</string>
+    <string name="template_edit">編集</string>
+    <string name="template_delete">削除</string>
+    <string name="template_ctx_menu_title">アクション</string>
+    <string name="template_list_title">テンプレート</string>
+    <string name="template_edit_title">テンプレートを編集</string>
+    <string name="template_new_title">新規テンプレート</string>
+    <string name="template_insert">テンプレートを挿入</string>
+    <string name="template_insert_ctx_menu_title">テキストを編集</string>
+    <string name="template_gesture_draw">下のスペースにジェスチャーを描いてください</string>
+    <string name="template_not_present_error">まだテンプレートは作成されていません</string>
+    <string name="template_not_present_error_title">エラー</string>
+    <string name="template_select">テンプレートを選択</string>
+    <string name="template_cancel_confirm_title">警告</string>
+    <string name="template_cancel_confirm_text">キャンセルしますか?</string>
+    <string name="gestures_already_present">警告: 似たようなジェスチャーが別のアクションとして定義されています！</string>
+
+    <!-- Phone goggles -->
+    <string name="toast_phone_goggles">今の時間にSMSを送信することは許可されていません。あとで再度お試しください。</string>
+    <string name="dialog_phone_goggles_title">SMSはブロックされました</string>
+    <string name="dialog_phone_goggles_title_unlocked">SMSは承認されました</string>
+    <string name="dialog_phone_goggles_content">今の時間にSMSを送信するのは恐らく賢明ではありません。それでも続けますか？</string>
+    <string name="dialog_phone_goggles_unauthorized">今の時間にSMSを送信するのは賢明ではありません。</string>
+    <string name="dialog_phone_goggles_ok">送信</string>
+    <string name="dialog_phone_goggles_cancel">下書きを保存</string>
+
 </resources>

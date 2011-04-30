@@ -108,6 +108,8 @@
     <string name="cannot_send_message" msgid="3918913277571649400">"Impossibile inviare il messaggio"</string>
     <string name="cannot_send_message_reason" msgid="8745080126044054343">"Il messaggio non ha destinatari validi."</string>
     <string name="cannot_forward_drm_obj" msgid="84606990079390099">"Impossibile inoltrare l\'oggetto DRM incluso nel messaggio."</string>
+    <!-- Error message displayed when the user attempts to attach a contact whose ID could not be resolved -->
+    <string name="cannot_find_contact">Il contatto che hai selezionato non può essere allegato.</string>
     <string name="converting_to_picture_message" msgid="2980023239017588627">"Conversione in messaggio multimediale in corso..."</string>
     <string name="converting_to_text_message" msgid="6374423235426015422">"Conversione in messaggio di testo in corso..."</string>
     <string name="cannot_add_slide_anymore" msgid="8437666385579890987">"Impossibile aggiungere altre diapositive."</string>
@@ -167,6 +169,16 @@
     <string name="pref_summary_mms_delivery_reports" msgid="4874657984217756112">"Richiedi una conferma di consegna per ogni messaggio inviato"</string>
     <string name="pref_summary_mms_read_reports" msgid="2748323864008907440">"Richiedi una conferma di lettura per ogni messaggio inviato"</string>
     <string name="pref_summary_sms_delivery_reports" msgid="5852207702358546129">"Richiedi una conferma di consegna per ogni messaggio inviato"</string>
+
+    <!-- Settings item for SMS Split 160 characters setting -->
+    <string name="pref_title_sms_split_160">Dividi SMS</string>
+    <!-- Settings item description for boolean SMS Split 160 characters setting -->
+    <string name="pref_summary_sms_split_160">Dividi il messaggio ogni 160 caratteri</string>
+    <!-- Settings item for boolean option for SMS Split Counter -->
+    <string name="pref_title_sms_split_counter">Contatore messaggi</string>
+    <!-- Settings item description for boolean SMS Split 160 characters setting -->
+    <string name="pref_summary_sms_split_counter">Aggiunge al messaggio un contatore, es. (1/2)</string>
+
     <string name="pref_summary_auto_delete" msgid="7719538116486177613">"Elimina vecchi messaggi al raggiungimento dei limiti"</string>
     <string name="pref_summary_delete_limit" msgid="597128041393045216">"<xliff:g id="COUNT">%1$s</xliff:g> messaggi per conversazione"</string>
     <string name="pref_title_manage_sim_messages" msgid="7820895261757881177">"Gestisci messaggi della SIM"</string>
@@ -192,6 +204,10 @@
     <string name="pref_summary_mms_auto_retrieval" msgid="925163257363757048">"Recupera messaggi automaticamente"</string>
     <string name="pref_title_mms_retrieval_during_roaming" msgid="6016227402731817804">"Recupero in roaming"</string>
     <string name="pref_summary_mms_retrieval_during_roaming" msgid="2427892806582531020">"Recupera automaticamente i messaggi durante il roaming"</string>
+
+    <!-- Setting item for folder to save MMS Attachments to -->
+    <string name="pref_title_save_location">Cartella allegati</string>
+
     <string name="to_label" msgid="2355268818058389047">"A "</string>
     <string name="confirm_dialog_title" msgid="5810813994465120375">"Elimina"</string>
     <string name="confirm_dialog_locked_title" msgid="8179085718150932242">"Eliminare messaggio bloccato?"</string>
@@ -253,6 +269,8 @@
     <string name="attach_sound" msgid="3149325985970669609">"Audio"</string>
     <string name="attach_record_sound" msgid="6011431304469858929">"Registra audio"</string>
     <string name="attach_slideshow" msgid="3497422151091037063">"Presentazione"</string>
+    <!-- Attachment Type Selector Adapter. This string is an option in the "Attach" dialog, "Add music" dialog -->
+    <string name="attach_contact_info">Informazioni contatto</string>
     <string name="select_bottom_text" msgid="4201966447623311931">"Testo in basso"</string>
     <string name="select_top_text" msgid="6734183477539197815">"Testo in alto"</string>
     <string name="delivery_toast_body" msgid="4478305651728684364">"Messaggio ricevuto da %s"</string>
@@ -335,4 +353,96 @@
     <string name="sending_message" msgid="222836893217450538">"Invio in corso..."</string>
     <string name="error_state" msgid="5177386717626893507">"Stato non coerente"</string>
     <string name="error_state_text" msgid="5006221625000536698">"Lo stato di thread e destinatari non è coerente. Crea un rapporto bug e invialo all\'indirizzo android-sms-bugs@google.com."</string>
+
+    <!-- Extra Settings: -->
+    <string name="pref_extra_settings">Impostazioni extra</string>
+
+    <!-- Back to all threads -->
+    <string name="pref_title_mms_back_to_all_threads">Torna alla lista thread</string>
+    <string name="pref_summary_mms_back_to_all_threads">Torna sempre alla lista conversazioni alla pressione del tasto BACK</string>
+
+    <!-- Toggle setting for enable/disable Black Background -->
+    <string name="pref_title_mms_black_background">Sfondo nero</string>
+    <string name="pref_summary_mms_black_background">Attiva/disattiva sfondo nero\n(Riavvio app richiesto)</string>
+
+    <!-- Toggle setting for always show character counter -->
+    <string name="pref_title_show_counter_always">Mostra contatore caratteri</string>
+    <string name="pref_summary_show_counter_always">Mostra sempre il contatore dei caratteri durante la composizone di un messaggio</string>
+
+    <!-- Custom user-agent -->
+    <string name="pref_mms_custom_option">Personalizzato..</string>
+    <string name="pref_title_mms_user_agent">Scegli User-Agent</string>
+    <string name="pref_summary_mms_user_agent">Fingi che il telefono sia un modello differente (utile per gli MMS)</string>
+    <string name="pref_mms_user_agent_custom_set">User-agent impostato:\n</string>
+
+    <!-- Full timestamps -->
+    <string name="pref_title_mms_full_timestamp">Timestamp completi</string>
+    <string name="pref_summary_mms_full_timestamp">Attiva per mostrare sia la data che l\'ora nel timestamp dei messagi</string>
+
+    <!-- Which timestamps -->
+    <string name="pref_title_mms_use_sent_timestamp">Usa timestamp originali</string>
+    <string name="pref_summary_mms_use_sent_timestamp">Visualizza e archivia la data di invio invece della data di ricezione</string>
+
+    <!-- Only mobile numbers -->
+    <string name="pref_title_only_mobile_numbers">Solo numeri mobili</string>
+    <string name="pref_summary_only_mobile_numbers">Attiva per poter visualizzare solo numeri di rete mobile nel campo del destinatario</string>
+
+    <!-- Email address completion -->
+    <string name="pref_title_mms_email_addr_completion">Completamento ind. Email</string>
+    <string name="pref_summary_mms_email_addr_completion">Attiva/disattiva completamento automatico indirizzo email nel campo del destinatario</string>
+
+    <!-- Message Font size -->
+    <string name="pref_title_mms_message_font_size">Dimensione caratteri</string>
+    <string name="pref_summary_mms_message_font_size">Cambia la dimensione dei caratteri dei messaggi</string>
+    <string name="pref_dialogtitle_mms_message_font_size">Seleziona dimensione</string>
+
+    <!-- Change Vibrate pattern/method for message notification -->
+    <string name="pref_title_mms_notification_vibrate_settings">Impostazioni vibrazione</string>
+    <string name="pref_title_mms_notification_vibrate_pattern">Sequenza di vibrazione</string>
+    <string name="pref_summary_mms_notification_vibrate_pattern">Modifica sequenza di vibrazione</string>
+    <string name="pref_title_mms_notification_vibrate_call">Vibra durante chiamata</string>
+    <string name="pref_summary_mms_notification_vibrate_call">Abilita vibrazione durante una chiamata</string>
+    <string name="pref_title_mms_notification_vibrate_custom">Sequenza personalizzata</string>
+    <string name="pref_text_mms_notification_vibrate_custom">Sequenza off/on in millisecondi: off, on, off, on, ...</string>
+
+    <!-- Send on enter -->
+    <string name="pref_title_mms_send_on_enter">Invio con Enter</string>
+    <string name="pref_summary_mms_send_on_enter">Attiva/disattiva invio sms alla pressione del tasto enter</string>
+
+    <!-- Sms templates -->
+    <string name="prefs_templates_settings">Modelli sms</string>
+    <string name="pref_title_templates_manage">Modelli</string>
+    <string name="pref_summary_templates_manage">Gestisci i tuoi modelli</string>
+    <string name="pref_title_templates_show_gesture">Gesture</string>
+    <string name="pref_summary_templates_show_gesture">Mostra traccia della gesture</string>
+    <string name="pref_title_template_gestures_sensitivity">Sensibilità gesture</string>
+    <string name="template_save">Salva</string>
+    <string name="template_insert_hint">Inserisci qui il testo del modello</string>
+    <string name="template_empty_text">Il testo non può essere vuoto</string>
+    <string name="template_explanation">Inserisci o modifica il testo del modello e,
+        opzionalmente, disegna una gesture a cui associarlo</string>
+    <string name="template_edit">Modifica</string>
+    <string name="template_delete">Elimina</string>
+    <string name="template_ctx_menu_title">Azioni</string>
+    <string name="template_list_title">Modelli</string>
+    <string name="template_edit_title">Modifica modello</string>
+    <string name="template_new_title">Nuovo modello</string>
+    <string name="template_insert">Inserisci modello</string>
+    <string name="template_insert_ctx_menu_title">Modifica testo</string>
+    <string name="template_gesture_draw">Disegna la gesture nello spazio sottostante</string>
+    <string name="template_not_present_error">Non hai ancora definito alcun modello</string>
+    <string name="template_not_present_error_title">Errore</string>
+    <string name="template_select">Seleziona un modello</string>
+    <string name="template_cancel_confirm_title">Warning</string>
+    <string name="template_cancel_confirm_text">Vuoi davvero cancellare questo modello?</string>
+    <string name="gestures_already_present">Attenzione! Una gesture simile è associata ad un altro template</string>
+
+    <!-- Phone goggles -->
+    <string name="toast_phone_goggles">Non ti è permesso inviare messaggi a quest\'ora. Riprova più tardi.</string>
+    <string name="dialog_phone_goggles_title">Messaggio bloccato</string>
+    <string name="dialog_phone_goggles_title_unlocked">Messaggio autorizzato</string>
+    <string name="dialog_phone_goggles_content">Può non esser saggio inviare messaggi a quest\'ora. Sicuro di voler continuare?</string>
+    <string name="dialog_phone_goggles_unauthorized">Può non esser saggio inviare messaggi a quest\'ora.</string>
+    <string name="dialog_phone_goggles_ok">Invia</string>
+    <string name="dialog_phone_goggles_cancel">Salva bozza</string>
 </resources>

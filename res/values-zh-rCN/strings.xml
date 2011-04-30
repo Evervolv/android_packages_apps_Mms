@@ -108,6 +108,9 @@
     <string name="cannot_send_message" msgid="3918913277571649400">"无法发送此信息"</string>
     <string name="cannot_send_message_reason" msgid="8745080126044054343">"您的信息没有有效的接收者。"</string>
     <string name="cannot_forward_drm_obj" msgid="84606990079390099">"无法转发信息中包含的 DRM 对象。"</string>
+    <!-- Error message displayed when the user attempts to attach a contact whose ID could not be resolved -->
+    <string name="cannot_find_contact">无法转发选择的联系人信息。</string>
+
     <string name="converting_to_picture_message" msgid="2980023239017588627">"正在转换为彩信…"</string>
     <string name="converting_to_text_message" msgid="6374423235426015422">"正在转换为短信…"</string>
     <string name="cannot_add_slide_anymore" msgid="8437666385579890987">"无法再添加幻灯片。"</string>
@@ -167,6 +170,10 @@
     <string name="pref_summary_mms_delivery_reports" msgid="4874657984217756112">"要求每次发送信息后都返回发送报告"</string>
     <string name="pref_summary_mms_read_reports" msgid="2748323864008907440">"要求每次发送信息后都返回已读回执"</string>
     <string name="pref_summary_sms_delivery_reports" msgid="5852207702358546129">"要求每次发送信息后都返回发送报告"</string>
+    <string name="pref_title_sms_split_160">短信分段</string>
+    <string name="pref_summary_sms_split_160">按每 160 个字符分割消息</string>
+    <string name="pref_title_sms_split_counter">分割编号</string>
+    <string name="pref_summary_sms_split_counter">在分割的消息中加入编号，例如：(1/2)</string>
     <string name="pref_summary_auto_delete" msgid="7719538116486177613">"达到数量上限时删除旧信息"</string>
     <string name="pref_summary_delete_limit" msgid="597128041393045216">"每个会话限存储 <xliff:g id="COUNT">%1$s</xliff:g> 条短信"</string>
     <string name="pref_title_manage_sim_messages" msgid="7820895261757881177">"管理 SIM 卡中的信息"</string>
@@ -192,6 +199,7 @@
     <string name="pref_summary_mms_auto_retrieval" msgid="925163257363757048">"自动检索信息"</string>
     <string name="pref_title_mms_retrieval_during_roaming" msgid="6016227402731817804">"漫游时自动检索"</string>
     <string name="pref_summary_mms_retrieval_during_roaming" msgid="2427892806582531020">"漫游时自动检索信息"</string>
+    <string name="pref_title_save_location">附件保存文件夹</string>
     <string name="to_label" msgid="2355268818058389047">"接收者 "</string>
     <string name="confirm_dialog_title" msgid="5810813994465120375">"删除"</string>
     <string name="confirm_dialog_locked_title" msgid="8179085718150932242">"是否删除锁定的讯息？"</string>
@@ -253,6 +261,9 @@
     <string name="attach_sound" msgid="3149325985970669609">"音频"</string>
     <string name="attach_record_sound" msgid="6011431304469858929">"录音"</string>
     <string name="attach_slideshow" msgid="3497422151091037063">"幻灯片"</string>
+    <!-- Attachment Type Selector Adapter. This string is an option in the "Attach" dialog, "Add music" dialog -->
+    <string name="attach_contact_info">联系人信息</string>
+
     <string name="select_bottom_text" msgid="4201966447623311931">"底部文本"</string>
     <string name="select_top_text" msgid="6734183477539197815">"顶部文本"</string>
     <string name="delivery_toast_body" msgid="4478305651728684364">"%s已接收消息"</string>
@@ -335,4 +346,95 @@
     <string name="sending_message" msgid="222836893217450538">"正在发送…"</string>
     <string name="error_state" msgid="5177386717626893507">"状态不一致"</string>
     <string name="error_state_text" msgid="5006221625000536698">"会话和收件人的状态不一致。请对错误报告拍照并发送至 android-sms-bugs@google.com"</string>
+
+    <!-- Extra Settings: -->
+    <string name="pref_extra_settings">额外设置</string>
+
+    <!-- Back to all threads -->
+    <string name="pref_title_mms_back_to_all_threads">回返所有会话</string>
+    <string name="pref_summary_mms_back_to_all_threads">当按下返回键时总是回到所有会话</string>
+
+    <!-- Toggle setting for enable/disable Black Background -->
+    <string name="pref_title_mms_black_background">黑色背景</string>
+    <string name="pref_summary_mms_black_background">启用/禁用黑色背景\n(需重启短信程序)</string>
+
+    <!-- Toggle setting for always show character counter -->
+    <string name="pref_title_show_counter_always">总是显示字符计数</string>
+    <string name="pref_summary_show_counter_always">编辑短信时总是显示字符计数</string>
+
+    <!-- Custom user-agent -->
+    <string name="pref_mms_custom_option">自定义..</string>
+    <string name="pref_title_mms_user_agent">自定义用户代理标识</string>
+    <string name="pref_summary_mms_user_agent">为彩信伪装不同型号手机</string>
+    <string name="pref_mms_user_agent_custom_set">自定义用户代理标识设置为:\n</string>
+
+    <!-- Full timestamps -->
+    <string name="pref_title_mms_full_timestamp">完整时间戳</string>
+    <string name="pref_summary_mms_full_timestamp">启用在消息时间戳中显示日期和时间</string>
+
+    <!-- Which timestamps -->
+    <string name="pref_title_mms_use_sent_timestamp">使用原始时间戳</string>
+    <string name="pref_summary_mms_use_sent_timestamp">以收到日期代替发送日期显示并存储</string>
+
+    <!-- Only mobile numbers -->
+    <string name="pref_title_only_mobile_numbers">仅显示电话号码</string>
+    <string name="pref_summary_only_mobile_numbers">在接收者中仅显示电话号码</string>
+
+    <!-- Email address completion -->
+    <string name="pref_title_mms_email_addr_completion">电子邮件地址自动完成</string>
+    <string name="pref_summary_mms_email_addr_completion">启用/禁用接收者中的电子邮件自动完成功能</string>
+
+    <!-- Message Font size -->
+    <string name="pref_title_mms_message_font_size">消息字体大小</string>
+    <string name="pref_summary_mms_message_font_size">更改消息视图中的字体大小</string>
+    <string name="pref_dialogtitle_mms_message_font_size">选择字体大小</string>
+
+    <!-- Change Vibrate pattern/method for message notification -->
+    <string name="pref_title_mms_notification_vibrate_settings">振动设置</string>
+    <string name="pref_title_mms_notification_vibrate_pattern">振动模式</string>
+    <string name="pref_summary_mms_notification_vibrate_pattern">更改振动模式</string>
+    <string name="pref_title_mms_notification_vibrate_call">来电振动</string>
+    <string name="pref_summary_mms_notification_vibrate_call">允许在来电时振动</string>
+    <string name="pref_title_mms_notification_vibrate_custom">自定义振动模式</string>
+    <string name="pref_text_mms_notification_vibrate_custom">毫秒开/关格式: 关, 开, 关, 开, ...</string>
+
+    <!-- Send on enter -->
+    <string name="pref_title_mms_send_on_enter">回车发送</string>
+    <string name="pref_summary_mms_send_on_enter">启用/禁用当按下回车键时发送消息</string>
+
+    <!-- Sms templates -->
+    <string name="prefs_templates_settings">信息模板</string>
+    <string name="pref_title_templates_manage">模板</string>
+    <string name="pref_summary_templates_manage">管理您的信息模板</string>
+    <string name="pref_title_templates_show_gesture">手势</string>
+    <string name="pref_summary_templates_show_gesture">显示手势轨迹</string>
+    <string name="pref_title_template_gestures_sensitivity">手势灵敏度</string>
+    <string name="template_save">保存</string>
+    <string name="template_insert_hint">在此插入信息模板</string>
+    <string name="template_empty_text">文本栏不能为空</string>
+    <string name="template_explanation">插入或修改模板文本并且可以画一个手势来访问它</string>
+    <string name="template_edit">编辑</string>
+    <string name="template_delete">删除</string>
+    <string name="template_ctx_menu_title">动作</string>
+    <string name="template_list_title">模板</string>
+    <string name="template_edit_title">编辑模板</string>
+    <string name="template_new_title">新建模板</string>
+    <string name="template_insert">插入模板</string>
+    <string name="template_insert_ctx_menu_title">编辑文本</string>
+    <string name="template_gesture_draw">在下面的空白处画一个手势</string>
+    <string name="template_not_present_error">您没有定义任何模板</string>
+    <string name="template_not_present_error_title">错误</string>
+    <string name="template_select">选择一个模板</string>
+    <string name="template_cancel_confirm_title">警告</string>
+    <string name="template_cancel_confirm_text">您真的要取消吗？</string>
+    <string name="gestures_already_present">警告：一个相似的手势会访问另一个模板！</string>
+
+    <!-- Phone goggles -->
+    <string name="toast_phone_goggles">您现在不允许发送信息。请稍候再试。</string>
+    <string name="dialog_phone_goggles_title">信息被阻止</string>
+    <string name="dialog_phone_goggles_title_unlocked">信息已授权</string>
+    <string name="dialog_phone_goggles_content">此时发送信息可能不明智。您确定要继续吗？</string>
+    <string name="dialog_phone_goggles_unauthorized">此时发送信息可能不明智。</string>
+    <string name="dialog_phone_goggles_ok">发送</string>
+    <string name="dialog_phone_goggles_cancel">保存草稿</string>
 </resources>

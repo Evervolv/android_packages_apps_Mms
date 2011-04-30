@@ -335,4 +335,108 @@
     <string name="sending_message" msgid="222836893217450538">"보내는 중..."</string>
     <string name="error_state" msgid="5177386717626893507">"변경으로 인한 불일치 상태"</string>
     <string name="error_state_text" msgid="5006221625000536698">"대화목록과 받는사람의 상태가 일치하지 않습니다. 버그 보고서를 캡쳐하여 android-sms-bugs@google.com으로 보내주세요."</string>
+
+    <!-- Extra Settings: -->
+    <string name="pref_extra_settings">추가 설정</string>
+
+    <!-- Back to all threads -->
+    <string name="pref_title_mms_back_to_all_threads">모든 대화목록으로 돌아가기</string>
+    <string name="pref_summary_mms_back_to_all_threads">뒤로 가기 버튼을 눌렀을 때 항상 모든 대화목록으로 이동합니다.</string>
+
+    <!-- Toggle setting for enable/disable Black Background -->
+    <string name="pref_title_mms_black_background">검은 배경</string>
+    <string name="pref_summary_mms_black_background">검은색 배경을 사용하거나 사용하지 않습니다.\n(메시지 어플 재시작 필요)</string>
+
+    <!-- Toggle setting for always show character counter -->
+    <string name="pref_title_show_counter_always">항상 글자 갯수 보여주기</string>
+    <string name="pref_summary_show_counter_always">메시지를 작성할 때 항상 글자 갯수를 표시합니다.</string>
+
+    <!-- Custom user-agent -->
+    <string name="pref_mms_custom_option">사용자 지정..</string>
+    <string name="pref_title_mms_user_agent">사용자 지정 User-Agent</string>
+    <string name="pref_summary_mms_user_agent">MMS에서 다른 모델로 인식하도록 합니다.</string>
+    <string name="pref_mms_user_agent_custom_set">사용자 지정 User Agent:\n</string>
+
+    <!-- Full timestamps -->
+    <string name="pref_title_mms_full_timestamp">시간 완전히 표시하기</string>
+    <string name="pref_summary_mms_full_timestamp">메시지 시간을 표시할때 날짜와 시간을 모두 보여줍니다.</string>
+
+    <!-- Which timestamps -->
+    <string name="pref_title_mms_use_sent_timestamp">원본 시간 사용</string>
+    <string name="pref_summary_mms_use_sent_timestamp">받은 시간이 아닌 원본 시간을 보여주고 저장합니다</string>
+
+    <!-- Only mobile numbers -->
+    <string name="pref_title_only_mobile_numbers">휴대전화 번호만</string>
+    <string name="pref_summary_only_mobile_numbers">활성화하면 받는사람 칸에 휴대전화 번호만 보이게 됩니다.</string>
+
+    <!-- Email address completion -->
+    <string name="pref_title_mms_email_addr_completion">이메일 주소 자동완성</string>
+    <string name="pref_summary_mms_email_addr_completion">받는사람 칸에서 이메일 주소 자동완성을 활성화하거나 비할성화합니다.</string>
+
+    <!-- Message Font size -->
+    <string name="pref_title_mms_message_font_size">메시지 글꼴 크기</string>
+    <string name="pref_summary_mms_message_font_size">메시지의 글꼴을 조정합니다</string>
+    <string name="pref_dialogtitle_mms_message_font_size">글꼴 크기 선택</string>
+
+    <!-- Change Vibrate pattern/method for message notification -->
+    <string name="pref_title_mms_notification_vibrate_settings">진동 설정</string>
+    <string name="pref_title_mms_notification_vibrate_pattern">진동 방식</string>
+    <string name="pref_summary_mms_notification_vibrate_pattern">진동 방식 바꾸기</string>
+    <string name="pref_title_mms_notification_vibrate_call">통화 중에 진동하기</string>
+    <string name="pref_summary_mms_notification_vibrate_call">통화 중에 메시지가 왔을때도 진동을 울립니다.</string>
+    <string name="pref_title_mms_notification_vibrate_custom">사용자 지정 진동 방식</string>
+    <string name="pref_text_mms_notification_vibrate_custom">밀리초 단위로 꺼짐/켜짐을 입력하세요.(꺼짐, 켜짐, 꺼짐, 켜짐...)</string>
+
+    <!-- Send on enter -->
+    <string name="pref_title_mms_send_on_enter">엔터 키로 보내기</string>
+    <string name="pref_summary_mms_send_on_enter">엔터 키를 눌러 메시지를 보내는 것을 활성화/비활성화합니다.</string>
+
+    <!-- Sms templates -->
+    <string name="prefs_templates_settings">메시지 서식</string>
+    <string name="pref_title_templates_manage">서식</string>
+    <string name="pref_summary_templates_manage">메시지 서식을 관리합니다.</string>
+    <string name="pref_title_templates_show_gesture">손동작</string>
+    <string name="pref_summary_templates_show_gesture">손동작 자취를 보여줍니다.</string>
+    <string name="pref_title_template_gestures_sensitivity">손동작 민감도</string>
+    <string name="template_save">저장</string>
+    <string name="template_insert_hint">새로운 서식 내용을 여기에 입력하세요</string>
+    <string name="template_empty_text">내용 칸은 비어있을 수 없습니다.</string>
+    <string name="template_explanation">서식 내용을 추가하거나 수정할 수 있습니다. 손동작을 그려 연동할 수도 있습니다.</string>
+    <string name="template_edit">수정</string>
+    <string name="template_delete">삭제</string>
+    <string name="template_ctx_menu_title">동작</string>
+    <string name="template_list_title">서식 목록</string>
+    <string name="template_edit_title">서식 수정</string>
+    <string name="template_new_title">새 서식</string>
+    <string name="template_insert">서식 추가</string>
+    <string name="template_insert_ctx_menu_title">내용 수정</string>
+    <string name="template_gesture_draw">아래의 공간에 손동작을 그리세요.</string>
+    <string name="template_not_present_error">서식을 지정하지 않았습니다.</string>
+    <string name="template_not_present_error_title">오류</string>
+    <string name="template_select">서식을 선택하세요</string>
+    <string name="template_cancel_confirm_title">경고</string>
+    <string name="template_cancel_confirm_text">취소하시겠습니까?</string>
+    <string name="gestures_already_present">경고: 다른 서식에 비슷한 손동작이 연결되어있습니다.</string>
+
+    <!-- Phone goggles -->
+    <string name="toast_phone_goggles">이 시간에 메시지를 보내지 못하도록 설정되어 있습니다. 다음에 다시 시도해 주세요.</string>
+    <string name="dialog_phone_goggles_title">메시지 보내기 금지됨</string>
+    <string name="dialog_phone_goggles_title_unlocked">메시지 인증됨</string>
+    <string name="dialog_phone_goggles_content">이 시간에 메시지를 보내는 것은 좋지 못한 선택일 수도 있습니다. 계속하시겠습니까?</string>
+    <string name="dialog_phone_goggles_unauthorized">이 시간에 메시지를 보내는 것은 좋지 못한 선택일 수도 있습니다.</string>
+    <string name="dialog_phone_goggles_ok">보내기</string>
+    <string name="dialog_phone_goggles_cancel">임시보관</string>
+
+    <!-- Settings item for SMS Split 160 characters setting -->
+    <string name="pref_title_sms_split_160">메시지 나누기</string>
+    <!-- Settings item description for boolean SMS Split 160 characters setting -->
+    <string name="pref_summary_sms_split_160">메시지를 160글자씩 나눕니다.</string>
+    <!-- Settings item for boolean option for SMS Split Counter -->
+    <string name="pref_title_sms_split_counter">나눈 갯수 표시</string>
+    <!-- Settings item description for boolean SMS Split 160 characters setting -->
+    <string name="pref_summary_sms_split_counter">메시지에 나눈 갯수를 표시합니다. 예) (1/2)</string>
+
+    <!-- Setting item for folder to save MMS Attachments to -->
+    <string name="pref_title_save_location">첨부파일 저장 폴더</string>
+
 </resources>
