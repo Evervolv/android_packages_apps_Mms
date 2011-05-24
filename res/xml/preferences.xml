@@ -97,5 +97,9 @@
 		        android:title="@string/pref_title_mms_black_background"
 		        android:summary="@string/pref_summary_mms_black_background"
 		        android:defaultValue="false" />
+    <CheckBoxPreference android:key="pref_key_mms_9016_notification"
+		        android:title="@string/pref_title_mms_9016_notification"
+		        android:summary="@string/pref_summary_mms_9016_notification"
+		        android:defaultValue="false" />
   </PreferenceCategory>
 </PreferenceScreen>

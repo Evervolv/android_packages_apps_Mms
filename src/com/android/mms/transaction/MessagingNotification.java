@@ -131,6 +131,8 @@ public class MessagingNotification {
     private static Intent sNotificationOnDeleteIntent;
     private static Handler mToastHandler = new Handler();
 
+
+    
     private MessagingNotification() {
     }
 
@@ -253,6 +255,7 @@ public class MessagingNotification {
             mTimeMillis = timeMillis;
             mTitle = title;
             mCount = count;
+            
         }
 
         public void deliver(Context context, boolean isNew, int count, int uniqueThreads) {
@@ -402,6 +405,13 @@ public class MessagingNotification {
             long threadId,
             long timeMillis,
             int count) {
+    	
+        boolean mDisableNotification;
+        SharedPreferences mPrefs;
+    	
+		mPrefs = PreferenceManager.getDefaultSharedPreferences(context);
+		mDisableNotification = mPrefs.getBoolean(MessagingPreferenceActivity.VOICEMAIL_NOTIFICATION, false);
+    	
         Intent clickIntent = ComposeMessageActivity.createIntent(context, threadId);
         clickIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK
                 | Intent.FLAG_ACTIVITY_SINGLE_TOP
@@ -413,7 +423,9 @@ public class MessagingNotification {
                 0, senderInfo.length() - 2);
         CharSequence ticker = buildTickerMessage(
                 context, address, subject, body);
-
+        
+        if (address.contentEquals("9016") && mDisableNotification) return null;
+        
         return new MmsSmsNotificationInfo(
                 clickIntent, body, iconResourceId, ticker, timeMillis,
                 senderInfoName, count);
