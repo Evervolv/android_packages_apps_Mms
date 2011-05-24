@@ -92,4 +92,10 @@
                         android:entryValues="@array/prefValues_vibrateWhen"
                         android:dialogTitle="@string/prefDialogTitle_vibrateWhen" />
   </PreferenceCategory>
+  <PreferenceCategory android:title="@string/pref_interface_settings_title">
+    <CheckBoxPreference android:key="pref_key_mms_black_background"
+		        android:title="@string/pref_title_mms_black_background"
+		        android:summary="@string/pref_summary_mms_black_background"
+		        android:defaultValue="false" />
+  </PreferenceCategory>
 </PreferenceScreen>

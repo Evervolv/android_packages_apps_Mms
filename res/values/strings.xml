@@ -763,5 +763,12 @@
          changed -->
     <string name="error_state_text">The state of threads and recipients is inconsistent. Please capture a bug report and send it to android-sms-bugs@google.com</string>
 
+    <!-- Extra Settings: -->
+    <string name="pref_interface_settings_title">Interface settings</string>
+
+    <!-- Toggle setting for enable/disable Black Background -->
+    <string name="pref_title_mms_black_background">Black Background</string>
+    <string name="pref_summary_mms_black_background">Enable/disable black background\n(Restart Mms)</string>
+
 </resources>
 

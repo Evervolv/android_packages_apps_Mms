@@ -53,6 +53,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CursorAdapter;
 import android.widget.ListView;
+import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 
 import java.util.HashMap;
 import java.util.HashSet;
@@ -129,7 +131,8 @@ public class MessageListAdapter extends CursorAdapter {
     private Handler mMsgListItemHandler;
     private Pattern mHighlight;
     private Context mContext;
-
+    private boolean mBlackBackground;
+    
     private HashMap<String, HashSet<MessageListItem>> mAddressToMessageListItems
         = new HashMap<String, HashSet<MessageListItem>>();
 
@@ -157,6 +160,9 @@ public class MessageListAdapter extends CursorAdapter {
             mColumnsMap = new ColumnsMap(c);
         }
 
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
+        mBlackBackground = prefs.getBoolean(MessagingPreferenceActivity.BLACK_BACKGROUND, false);
+        
         mAvatarCache = new AvatarCache();
     }
 
@@ -182,7 +188,7 @@ public class MessageListAdapter extends CursorAdapter {
                     }
                 }
 
-                mli.bind(mAvatarCache, msgItem);
+                mli.bind(mAvatarCache, msgItem, mBlackBackground);
                 mli.setMsgListItemHandler(mMsgListItemHandler);
 
                 // Add current item to mapping
@@ -221,7 +227,7 @@ public class MessageListAdapter extends CursorAdapter {
         HashSet<MessageListItem> set = mAddressToMessageListItems.get(address);
         if (set != null) {
             for (MessageListItem mli : set) {
-                mli.bind(mAvatarCache, mli.getMessageItem());
+            	mli.bind(mAvatarCache, mli.getMessageItem(), mBlackBackground);
             }
         }
     }
@@ -252,7 +258,13 @@ public class MessageListAdapter extends CursorAdapter {
 
     @Override
     public View newView(Context context, Cursor cursor, ViewGroup parent) {
-        return mInflater.inflate(R.layout.message_list_item, parent, false);
+    	int resId = R.layout.message_list_item;
+    	
+		if(mBlackBackground) {
+			resId = R.layout.message_list_item_black;
+		}
+		
+		return mInflater.inflate(resId, parent, false);
     }
 
     public MessageItem getCachedMessageItem(String type, long msgId, Cursor c) {
