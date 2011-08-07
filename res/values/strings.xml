@@ -335,6 +335,14 @@
     <string name="pref_summary_mms_read_reports">Request a read report for each message you send</string>
     <!-- Settings item description for boolean SMS delivery report setting -->
     <string name="pref_summary_sms_delivery_reports">Request a delivery report for each message you send</string>
+    <!-- Settings item for SMS Split 160 characters setting -->
+    <string name="pref_title_sms_split_160">SMS split</string>
+    <!-- Settings item description for boolean SMS Split 160 characters setting -->
+    <string name="pref_summary_sms_split_160">Split messages every 160 characters</string>
+    <!-- Settings item for boolean option for SMS Split Counter -->
+    <string name="pref_title_sms_split_counter">Split counter</string>
+    <!-- Settings item description for boolean SMS Split 160 characters setting -->
+    <string name="pref_summary_sms_split_counter">Adds counter to message ex. (1/2)</string>
     <!-- Settings item description for boolean auto-delete messages setting -->
     <string name="pref_summary_auto_delete">Delete old messages as limits are reached</string>
     <!-- Settings item description for integer auto-delete sms message limit -->
