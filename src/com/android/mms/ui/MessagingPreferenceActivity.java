@@ -121,9 +121,6 @@ public class MessagingPreferenceActivity extends PreferenceActivity {
             PreferenceCategory smsCategory =
                 (PreferenceCategory)findPreference("pref_key_sms_settings");
             smsCategory.removePreference(mSmsDeliveryReportPref);
-            if (!MmsApp.getApplication().getTelephonyManager().hasIccCard()) {
-                getPreferenceScreen().removePreference(smsCategory);
-            }
         }
 
         if (!MmsConfig.getMmsEnabled()) {
