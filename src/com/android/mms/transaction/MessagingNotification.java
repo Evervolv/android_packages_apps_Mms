@@ -358,10 +358,14 @@ public class MessagingNotification {
             return null;
 
             String address = cursor.getString(COLUMN_SMS_ADDRESS);
+
+            String name = Contact.get(address, true).getName();
+
             long timeMillis = 3000;
 
             return new MmsSmsDeliveryInfo(String.format(
-                context.getString(R.string.delivery_toast_body), address),
+                context.getString(R.string.delivery_toast_body),
+                (name == null) ? address : name.replace('\n', ' ').replace ('\r', ' ')),
                 timeMillis);
 
         } finally {
