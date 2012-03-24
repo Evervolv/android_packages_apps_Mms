@@ -93,13 +93,15 @@ public class MessageItem {
     int mMessageSize;
     int mErrorType;
     int mErrorCode;
+    boolean mFullTimestamp;
 
     MessageItem(Context context, String type, Cursor cursor,
-            ColumnsMap columnsMap, Pattern highlight) throws MmsException {
+            ColumnsMap columnsMap, Pattern highlight, boolean fullTimestamp) throws MmsException {
         mContext = context;
         mMsgId = cursor.getLong(columnsMap.mColumnMsgId);
         mHighlight = highlight;
         mType = type;
+        mFullTimestamp = fullTimestamp;
 
         if ("sms".equals(type)) {
             mReadReport = false; // No read reports in sms
@@ -138,7 +140,7 @@ public class MessageItem {
             if (!isOutgoingMessage()) {
                 // Set "received" or "sent" time stamp
                 long date = cursor.getLong(columnsMap.mColumnSmsDate);
-                mTimestamp = MessageUtils.formatTimeStampString(context, date);
+                mTimestamp = MessageUtils.formatTimeStampString(context, date, mFullTimestamp);
             }
 
             mLocked = cursor.getInt(columnsMap.mColumnSmsLocked) != 0;
@@ -234,9 +236,9 @@ public class MessageItem {
             if (!isOutgoingMessage()) {
                 if (PduHeaders.MESSAGE_TYPE_NOTIFICATION_IND == mMessageType) {
                     mTimestamp = context.getString(R.string.expire_on,
-                            MessageUtils.formatTimeStampString(context, timestamp));
+                            MessageUtils.formatTimeStampString(context, timestamp, mFullTimestamp));
                 } else {
-                    mTimestamp =  MessageUtils.formatTimeStampString(context, timestamp);
+                    mTimestamp =  MessageUtils.formatTimeStampString(context, timestamp, mFullTimestamp);
                 }
             }
         } else {
