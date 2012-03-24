@@ -18,6 +18,7 @@
 package com.android.mms.transaction;
 
 import com.android.mms.LogTag;
+import com.android.mms.MmsConfig;
 import com.android.mms.ui.MessagingPreferenceActivity;
 import com.google.android.mms.MmsException;
 import android.database.sqlite.SqliteWrapper;
@@ -47,7 +48,6 @@ public class SmsMessageSender implements MessageSender {
 
     // Default preference values
     private static final boolean DEFAULT_DELIVERY_REPORT_MODE  = false;
-    private static final boolean DEFAULT_SMS_SPLIT_MESSAGE = false;
     private static final boolean DEFAULT_SMS_SPLIT_COUNTER = false;
 
     private static final String[] SERVICE_CENTER_PROJECTION = new String[] {
@@ -91,9 +91,7 @@ public class SmsMessageSender implements MessageSender {
                 MessagingPreferenceActivity.SMS_DELIVERY_REPORT_MODE,
                 DEFAULT_DELIVERY_REPORT_MODE);
 
-        boolean splitMessage = prefs.getBoolean(
-                MessagingPreferenceActivity.SMS_SPLIT_MESSAGE,
-                DEFAULT_SMS_SPLIT_MESSAGE);
+        boolean splitMessage = MmsConfig.getSplitSmsEnabled();
 
         boolean splitCounter = prefs.getBoolean(
                 MessagingPreferenceActivity.SMS_SPLIT_COUNTER,
