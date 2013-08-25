@@ -121,6 +121,10 @@ public class MessagingPreferenceActivity extends PreferenceActivity
     private PreferenceCategory mMmsPrefCategory;
     private PreferenceCategory mNotificationPrefCategory;
 
+    // Delay send
+    public static final String SEND_DELAY_DURATION       = "pref_key_send_delay";
+
+    private ListPreference mMessageSendDelayPref;
     private Preference mSmsLimitPref;
     private Preference mSmsDeliveryReportPref;
     private CheckBoxPreference mSmsSplitCounterPref;
@@ -275,6 +279,24 @@ public class MessagingPreferenceActivity extends PreferenceActivity
         mInputTypeEntries = getResources().getTextArray(R.array.pref_entries_input_type);
         mInputTypeValues = getResources().getTextArray(R.array.pref_values_input_type);
 
+<<<<<<< HEAD
+=======
+        // Blacklist screen - Needed for setting summary
+        mBlacklist = (PreferenceScreen) findPreference(BLACKLIST);
+
+        // Remove the Blacklist item if we are not running on CyanogenMod
+        // This allows the app to be run on non-blacklist enabled roms (including Stock)
+        if (!MessageUtils.isCyanogenMod(this)) {
+            PreferenceCategory extraCategory = (PreferenceCategory) findPreference("pref_key_extra_settings");
+            extraCategory.removePreference(mBlacklist);
+            mBlacklist = null;
+        }
+
+        // SMS Sending Delay
+        mMessageSendDelayPref = (ListPreference) findPreference(SEND_DELAY_DURATION);
+        mMessageSendDelayPref.setSummary(mMessageSendDelayPref.getEntry());
+
+>>>>>>> fa8c60f... Mms: Option to delay SMS Sending
         setMessagePreferences();
     }
 
@@ -409,6 +431,13 @@ public class MessagingPreferenceActivity extends PreferenceActivity
         mInputTypePref.setValue(inputType);
         adjustInputTypeSummary(mInputTypePref.getValue());
         mInputTypePref.setOnPreferenceChangeListener(this);
+
+        mMessageSendDelayPref.setOnPreferenceChangeListener(this);
+    }
+
+    public static long getMessageSendDelayDuration(Context context) {
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
+        return Long.valueOf(prefs.getString(SEND_DELAY_DURATION, "0"));
     }
 
     private void setRingtoneSummary(String soundValue) {
@@ -716,6 +745,11 @@ public class MessagingPreferenceActivity extends PreferenceActivity
             result = true;
         } else if (preference == mInputTypePref) {
             adjustInputTypeSummary((String)newValue);
+            result = true;
+        } else if (preference == mMessageSendDelayPref) {
+            String value = (String) newValue;
+            mMessageSendDelayPref.setValue(value);
+            mMessageSendDelayPref.setSummary(mMessageSendDelayPref.getEntry());
             result = true;
         }
         return result;
