@@ -38,6 +38,9 @@
     <string name="send_delay_30seconds">30 seconds</string>
     <string name="sent_countdown">Message delivery countdown</string>
 
+    <!-- Context menu item on a message for marking as unread -->
+    <string name="menu_as_unread">Mark as unread</string>
+
     <!-- Multi recipients -->
     <string name="loading">Loading\u2026</string>
     <string name="select_recipients">Select recipients</string>
