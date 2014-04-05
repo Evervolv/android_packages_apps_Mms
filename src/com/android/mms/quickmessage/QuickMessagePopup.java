@@ -745,6 +745,10 @@ public class QuickMessagePopup extends Activity implements
                     Log.d(LOG_TAG, "instantiateItem(): Creating page #" + (position + 1) + " for message from "
                             + qm.getFromName() + ". Number of pages to create = " + getCount());
 
+                if (mCurrentQm == null) {
+                    mCurrentQm = qm;
+                }
+
                 // Set the general fields
                 qmFromName.setText(qm.getFromName());
                 qmTimestamp.setText(MessageUtils.formatTimeStampString(mContext, qm.getTimestamp(), mFullTimestamp));
@@ -918,7 +922,12 @@ public class QuickMessagePopup extends Activity implements
         }
 
         @Override
-        public void finishUpdate(View arg0) {}
+        public void finishUpdate(View arg0) {
+            if (mCurrentQm != null && mCurrentQm.getEditText() != null) {
+                // After a page switch, re-focus on the reply editor
+                mCurrentQm.getEditText().requestFocus();
+            }
+        }
 
         @Override
         public void restoreState(Parcelable arg0, ClassLoader arg1) {}
@@ -929,7 +938,12 @@ public class QuickMessagePopup extends Activity implements
         }
 
         @Override
-        public void startUpdate(View arg0) {}
+        public void startUpdate(View arg0) {
+            if (mCurrentQm != null) {
+                // When the view is refreshed, preserve the current reply
+                mCurrentQm.saveReplyText();
+            }
+        }
 
         @Override
         public void onPageScrollStateChanged(int arg0) {}
