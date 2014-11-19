@@ -157,4 +157,5 @@
     <string name="sent_countdown">Message delivery countdown</string>
 >>>>>>> fa8c60f... Mms: Option to delay SMS Sending
 
+    <string name="start_new_message_button">New message</string>
 </resources>
