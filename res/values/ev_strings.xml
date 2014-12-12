@@ -135,4 +135,9 @@
 
     <string name="start_new_message_button">New message</string>
 
+    <!-- QuickMessage Wear-->
+    <string name="qm_wear_sending_message">Sending reply to <xliff:g id="name">%s</xliff:g></string>
+    <string name="qm_wear_messaged_failed">Your text message to <xliff:g id="name">%s</xliff:g> has failed to send please try again.</string>
+    <string name="qm_wear_voice_reply">What\'s your reply?</string>
+    <string name="qm_wear_reply_by_voice">Reply using voice</string>
 </resources>
