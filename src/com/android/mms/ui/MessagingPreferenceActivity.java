@@ -49,7 +49,6 @@ import android.view.MenuItem;
 
 import com.android.internal.telephony.IccCardConstants;
 import com.android.internal.telephony.TelephonyIntents;
-
 import com.android.mms.MmsApp;
 import com.android.mms.MmsConfig;
 import com.android.mms.R;
@@ -110,7 +109,7 @@ public class MessagingPreferenceActivity extends PreferenceActivity
     public static final String QM_DARK_THEME_ENABLED     = "pref_dark_theme";
 
     // Menu entries
-    private static final int MENU_RESTORE_DEFAULTS    = 1;
+    private static final int MENU_RESTORE_DEFAULTS       = 1;
 
     // Preferences for enabling and disabling SMS
     private Preference mSmsDisabledPref;
@@ -279,24 +278,10 @@ public class MessagingPreferenceActivity extends PreferenceActivity
         mInputTypeEntries = getResources().getTextArray(R.array.pref_entries_input_type);
         mInputTypeValues = getResources().getTextArray(R.array.pref_values_input_type);
 
-<<<<<<< HEAD
-=======
-        // Blacklist screen - Needed for setting summary
-        mBlacklist = (PreferenceScreen) findPreference(BLACKLIST);
-
-        // Remove the Blacklist item if we are not running on CyanogenMod
-        // This allows the app to be run on non-blacklist enabled roms (including Stock)
-        if (!MessageUtils.isCyanogenMod(this)) {
-            PreferenceCategory extraCategory = (PreferenceCategory) findPreference("pref_key_extra_settings");
-            extraCategory.removePreference(mBlacklist);
-            mBlacklist = null;
-        }
-
         // SMS Sending Delay
         mMessageSendDelayPref = (ListPreference) findPreference(SEND_DELAY_DURATION);
         mMessageSendDelayPref.setSummary(mMessageSendDelayPref.getEntry());
 
->>>>>>> fa8c60f... Mms: Option to delay SMS Sending
         setMessagePreferences();
     }
 
@@ -551,7 +536,6 @@ public class MessagingPreferenceActivity extends PreferenceActivity
 
         } else if (preference == mManageSimPref) {
             startActivity(new Intent(this, ManageSimMessages.class));
-
         } else if (preference == mClearHistoryPref) {
             showDialog(CONFIRM_CLEAR_SEARCH_HISTORY_DIALOG);
             return true;

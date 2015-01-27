@@ -56,6 +56,7 @@ import java.io.StreamCorruptedException;
 import java.util.ArrayList;
 
 class SMSObject implements Serializable{
+
     private String id;
     private String addr;
     private String msg;
@@ -103,7 +104,7 @@ class SMSObject implements Serializable{
     }
 }
 
-class SMSBackup implements Serializable{
+class SMSBackup implements Serializable {
 
     public ArrayList<SMSObject> SMSList;
     public SMSBackup() {

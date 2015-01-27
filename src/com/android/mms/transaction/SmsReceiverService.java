@@ -109,8 +109,6 @@ public class SmsReceiverService extends Service {
     private static final int SEND_COLUMN_STATUS     = 4;
 
 
-<<<<<<< HEAD
-=======
     // SMS sending delay
     private static Uri sCurrentSendingUri = Uri.EMPTY;
     public static final String ACTION_SEND_COUNTDOWN ="com.android.mms.transaction.SEND_COUNTDOWN";
@@ -118,28 +116,6 @@ public class SmsReceiverService extends Service {
     public static final String DATA_MESSAGE_URI = "DATA_MESSAGE_URI";
     private static final long TIMER_DURATION = 1000;
 
-    // Blacklist support
-    private static final String REMOVE_BLACKLIST = "com.android.mms.action.REMOVE_BLACKLIST";
-    private static final String EXTRA_NUMBER = "number";
-    private static final String EXTRA_FROM_NOTIFICATION = "fromNotification";
-    private static final int BLACKLISTED_MESSAGE_NOTIFICATION = 119911;
-
-    // Used to track blacklisted messages
-    private static class BlacklistedMessageInfo {
-        String number;
-        long date;
-        int matchType;
-
-        BlacklistedMessageInfo(String number, long date, int matchType) {
-            this.number = number;
-            this.date = date;
-            this.matchType = matchType;
-        }
-    };
-    private ArrayList<BlacklistedMessageInfo> mBlacklistedMessages =
-            new ArrayList<BlacklistedMessageInfo>();
-
->>>>>>> fa8c60f... Mms: Option to delay SMS Sending
     @Override
     public void onCreate() {
         // Temporarily removed for this duplicate message track down.
