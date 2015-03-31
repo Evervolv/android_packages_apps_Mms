@@ -25,6 +25,7 @@
     <drawable name="text_color_red">#ffff4444</drawable>
     <drawable name="text_color_black">#ff000000</drawable>
     <color name="message_count_color">#66333333</color>
+    <color name="action_bar_button_text_color">#FFFFFF</color>
 
     <!-- Chat "sent time" text background -->
     <color name="timestamp_color">#bf000000</color>
@@ -41,7 +42,11 @@
     <color name="translucent_white">#ccffffff</color>
 
     <!-- New text colors from layouts to make theme chooser apk easier to theme -->
+    <color name="compose_message_background_color">#ffffffff</color>
+    <color name="compose_message_edit_text">#000000</color>
+    <color name="compose_message_text_color">#ff000000</color>
     <color name="compose_message_text_counter">#cc333333</color>
+    <color name="compose_message_divider_color">#ffeeeeee</color>
     <color name="actionbar_text">#ccffffff</color>
     <color name="delete_thread_dialog">#000000</color>
     <color name="delivery_report_header">#ffffff</color>
@@ -77,5 +82,6 @@
     <color name="mms_theme_color_dark">#2E7D32</color>
     <color name="mms_theme_color_accent">#388E3C</color>
 
+    <color name="search_activity_background_color">@android:color/white</color>
     <color name="floating_action_button_icon_color">#ffffff</color>
 </resources>
