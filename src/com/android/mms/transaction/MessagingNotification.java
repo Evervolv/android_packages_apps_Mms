@@ -1082,7 +1082,7 @@ public class MessagingNotification {
 
                 //Wearable
                 noti.extend(wearableExtender.addAction( new NotificationCompat.Action.Builder(
-                    R.drawable.ic_menu_call, callText, mCallPendingIntent).build()));
+                    R.drawable.ic_menu_call, callText, callPendingIntent).build()));
 
                 //Set up remote input
                 String replyLabel = context.getString(R.string.qm_wear_voice_reply);
@@ -1102,7 +1102,6 @@ public class MessagingNotification {
                 PendingIntent voiceReplyPendingIntent =
                             PendingIntent.getActivity(context, 0, voiceReplyIntent,
                             PendingIntent.FLAG_UPDATE_CURRENT);
-
 
                 //Wearable voice reply action
                 NotificationCompat.Action action =
@@ -1159,12 +1158,15 @@ public class MessagingNotification {
                             messageCount));
 
                     // Show a single notification -- big style with the text of all the messages
-                    notification = new Notification.BigTextStyle(noti)
-                        .bigText(buf)
-                        // Forcibly show the last line, with the app's smallIcon in it, if we
-                        // kicked the smallIcon out with an avatar bitmap
-                        .setSummaryText((avatar == null) ? null : " ")
-                        .build();
+                    NotificationCompat.BigTextStyle bigTextStyle =
+                            new NotificationCompat.BigTextStyle();
+                    bigTextStyle.bigText(buf)
+                    // Forcibly show the last line, with the app's smallIcon in it, if we
+                    // kicked the smallIcon out with an avatar bitmap
+                    .setSummaryText((avatar == null) ? null : " ");
+                    notification =
+                            noti.setStyle(bigTextStyle)
+                                    .build();
                     if (DEBUG) {
                         Log.d(TAG, "updateNotification: multi messages for single thread");
                     }
@@ -1184,7 +1186,7 @@ public class MessagingNotification {
                     // When collapsed, show all the senders like this:
                     //     Fred Flinstone, Barry Manilow, Pete...
                     noti.setContentText(formatSenders(context, mostRecentNotifPerThread));
-                    Notification.InboxStyle inboxStyle = new Notification.InboxStyle(noti);
+                    NotificationCompat.InboxStyle inboxStyle = new NotificationCompat.InboxStyle(noti);
 
                     // We have to set the summary text to non-empty so the content text doesn't show
                     // up when expanded.
